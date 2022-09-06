@@ -1410,9 +1410,11 @@ footer{
 
     .banner-text h2, i{
         font-size:16pt;
+        font-weight:normal;     /*Poner bold si hace falta*/
     }
     .banner-text h1{
         font-size:17pt;
+        font-weight:normal;
     }
 
    
@@ -1962,5 +1964,11 @@ footer{
     #sql-logo{
         width:100px;
     } */
+
+
+    /*-------------------------------Footer----------------------------*/
+    footer p, li{
+        font-size:12px;
+    }
 }
 
