@@ -1787,8 +1787,11 @@ footer{
     p, li{
         font-size:11px;
     }
-    .info-about-me li{
-        font-size:11px;
+    .info-about-me li, p{
+        font-size:11.4px;
+    }
+    .contenedor-contact p{
+        font-size:11.5px;
     }
     /*----------------------------Ininio----------------------------*/
 
@@ -1827,7 +1830,7 @@ footer{
     /*----------------------------Seccion sobre mi----------------------------*/
     
     .section-about-me{
-        height:870px;
+        height:920px;
     }
     .contenedor-about-me{
         padding-top:40px;
@@ -2025,6 +2028,7 @@ footer{
     .btn-glass>.svg-git{
         width:13%;
         fill:var(--bs-indigo);
+        display:none
     }
 
 
