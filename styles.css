@@ -644,7 +644,7 @@ svg {
 
 }
 
-@media (hover: hover){
+/* @media (hover: hover){ */
 	.contorno-skills-2:hover{
         border:1px solid var(--bs-indigo);
         background:var(--whiteYT);
@@ -656,8 +656,8 @@ svg {
         transition:.4s;
         animation:zoom-pop .6s ease;
     }
-}
-.contorno-skills-2:active{
+/* } */
+/* .contorno-skills-2:active{
     border:1px solid var(--bs-indigo);
     background:var(--whiteYT);
     transition: .6s;
@@ -667,7 +667,7 @@ svg {
     fill:var(--bs-indigo);
     transition:.4s;
     animation:zoom-pop .6s ease;
-}
+} */
 
 @keyframes zoom-pop{
     0%{
@@ -1373,6 +1373,9 @@ footer{
     .icon{
         z-index:2;
         position:relative;
+        box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
+        -webkit-box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
+        -moz-box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
     }
 
     /* Iconos del footer */
@@ -1383,7 +1386,7 @@ footer{
             z-index:2;    
         }
     }   
-    /* hover para qeu no haga nada */
+    /* hover para que no haga nada */
     .icon-container:hover .icon{
         animation:none;
         transition:none; 
@@ -1401,7 +1404,10 @@ footer{
 @media only screen and (max-width: 575px){
 
 /*----------------------------Ininio----------------------------*/
-
+    .banner{
+        background-size: 300%;
+        background-position:20% 20%;
+    }
 
     p, li{
         font-size:12px;
@@ -1685,6 +1691,9 @@ footer{
     .icon{
         z-index:2;
         position:relative;
+        box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
+        -webkit-box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
+        -moz-box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
     }
 
     /* Iconos del footer */
@@ -1710,7 +1719,8 @@ footer{
 }
 
 
-/* Mediaqueries especial para el carrousel */
+
+/* Mediaqueries especial pantallas pequeñas */
 @media only screen and (max-width:465px){
 
     
@@ -1771,8 +1781,8 @@ footer{
         font-size: 12px;
     }
 }
-/*Celulares angostos*/
 
+/*Celulares angostos*/
 @media only screen and (max-width:365px){
     p, li{
         font-size:11px;
@@ -1782,15 +1792,21 @@ footer{
     }
     /*----------------------------Ininio----------------------------*/
 
-
+    .banner{
+        background-size: 300%;
+        background-position:20% 20%;
+    }
 
     .banner-text h2, i{
         font-size:13pt;
+        font-weight:600;     /*Poner normal si hace falta*/
+
     }
     .banner-text h1{
         font-size:14pt;
-    }
+        font-weight:500;
 
+    }
    
     .btn-link{
         width:150px;
@@ -1811,7 +1827,7 @@ footer{
     /*----------------------------Seccion sobre mi----------------------------*/
     
     .section-about-me{
-        height:930px;
+        height:870px;
     }
     .contenedor-about-me{
         padding-top:40px;
@@ -1876,6 +1892,15 @@ footer{
         transition:.3s;
     
     }
+
+
+    /*----------------------------Seccion habilidades----------------------------*/
+
+    .section-skills{
+        height:1320px;
+    }
+
+
     /*----------------------------Proyectos----------------------------*/
 
     .card-project{
@@ -1964,6 +1989,43 @@ footer{
     #sql-logo{
         width:100px;
     } */
+
+    /*-----------------------------Seccion de Proyectos--------------------------*/
+
+    .card-project{
+        width:100%;
+        height:240px;
+   
+    }
+    .glass{
+        width:100%;
+        
+        transform:translateY(-201px);
+        height:220px;
+    
+    }
+    .contenedor-info-glass{
+        margin:auto;
+
+        height:90%;
+    }
+
+    .contenedor-btn-glass{
+        width:100px;
+    }
+    
+    .btn-glass{
+        
+        width:100px;
+        padding:4px 0;
+        
+        font-size: 11px;
+    }
+
+    .btn-glass>.svg-git{
+        width:13%;
+        fill:var(--bs-indigo);
+    }
 
 
     /*-------------------------------Footer----------------------------*/
