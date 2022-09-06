@@ -104,9 +104,8 @@
 
 body{
     font-family: sans-serif;
-    /* padding-bottom:1000em;      Temporal. Herramienta para el diseño */
-	overflow-x:hidden;  /*Para ocultar el desplazamiento horizontal*/
-
+    max-width: 100% !important;
+    overflow-x: hidden !important;
 }
 
 .total-space{
@@ -171,11 +170,14 @@ body{
     
 }
 
-#menu li a:hover{
+@media (hover: hover){
+	#menu li a:hover{
 	transform: scale(1.05);
 	transition: all .1s;
     color: var(--bs-danger);
 }
+}
+
 
 
 nav.fixed#menu {
@@ -200,14 +202,15 @@ nav.fixed {
 
 .active-item{           /*Para utilizar en js*/
     color:var(--bs-danger) !important;
-    transform: scale(1.05) !important;
+    transform: translateX(5px) scale(1) !important;
 }
+
 
 /*--------------------------------- Inicio -----------------------------*/
 
 .banner{
     width: 100%;
-    height: 800px;
+    height: 100vh;
     text-align: center;
     background: linear-gradient(rgba(5,7,8, 0.8), rgba(5,7,8, 0.8)), url("img/fondo3.jpg");
     /*Parallax*/
@@ -216,7 +219,7 @@ nav.fixed {
     background-repeat: repeat;
 }
 
-.banner-text{
+.banner-text h2, h1, i{
     font-weight:lighter;
     /* font-family: monospace; */
     font-style:normal;
@@ -225,6 +228,8 @@ nav.fixed {
 .btn-link{
     width:200px;
     margin:auto;
+    margin-top:20px;
+
 }
 
 .btn-cv{
@@ -236,7 +241,6 @@ nav.fixed {
     font-family: monospace;
     font-size: 18px;
     width:200px;
-    margin-top:20px;
     border-radius: .5rem;
 }
 
@@ -248,7 +252,13 @@ a>.btn-cv{
     color: var(--bs-light);
 }
 
-.btn-cv:hover{
+@media (hover: hover){
+	.btn-cv:hover{
+    transition: background-color .4s;
+    background:var(--bs-indigo);
+}
+}
+.btn-cv:active{
     transition: background-color .4s;
     background:var(--bs-indigo);
 }
@@ -257,8 +267,18 @@ a>.btn-cv{
 /*--------------------------------- Sobre Mi -----------------------------*/
 
 .section-about-me{
+    width: 100%;
+
     background:var(--z1);
     height:700px;
+}
+
+.contenedor-about-me{
+    padding-top:40px;
+}
+
+.contenedor-about-me .row{
+    padding-top:40px;
 }
 
 .info-about-me{
@@ -277,7 +297,13 @@ a>.btn-cv{
     transition:color .3s;
 }
 
-.info-about-me a:hover{
+@media (hover: hover){
+	.info-about-me a:hover{
+        color:var(--bs-indigo);
+        transition:color .3s;
+    }
+}
+.info-about-me a:active{
     color:var(--bs-indigo);
     transition:color .3s;
 }
@@ -294,13 +320,6 @@ a>.btn-cv{
     text-align: start;
 }
 
-.contenedor-about-me{
-    padding-top:40px;
-}
-
-.contenedor-about-me .row{
-    padding-top:40px;
-}
 
 .pic-of-me{
     border:1px solid #fff;
@@ -406,17 +425,30 @@ a>.btn-cv{
 
 }
 
-.sm-icon:hover{
+
+@media (hover: hover){
+	.sm-icon:hover{
+        background:var(--bs-light);
+        transition:.3s;
+    }
+    .sm-icon:hover svg{
+        fill:var(--bs-indigo);
+        transition:.3s;
+        animation:zoom-pop .6s ease;
+    
+    }
+}
+.sm-icon:active{
     background:var(--bs-light);
     transition:.3s;
 }
-
-.sm-icon:hover svg{
+.sm-icon:active svg{
     fill:var(--bs-indigo);
     transition:.3s;
     animation:zoom-pop .6s ease;
 
 }
+
 
     /*      ------------      Efecto imagen 3d parallas tilt.js      ------------      */
 
@@ -479,7 +511,7 @@ a>.btn-cv{
     font-size:15px;
 }
 
-.me-3d .box:hover .contentBx{
+/* .me-3d .box:hover .contentBx{
     transform: translateZ(50px) scaleY(1);
 }
 
@@ -489,7 +521,7 @@ a>.btn-cv{
     border-radius:0.25em;
     
     filter: saturate(200%);
-}
+} */
 
 
 
@@ -498,27 +530,33 @@ a>.btn-cv{
 
 /* imagenes de lenguajes */
 #html-logo{
+    margin-top:20px;
     width:110px;
     }
 #css-logo{
+    margin-top:20px;
     width:135px;
 }
 #js-logo{
+    margin-top:20px;
     width:110px;
 }
 #git-logo{
+    margin-top:20px;
+
     width:125px;
 }
 #php-logo{
-    width:200px;
+    width:150px;
 }
 #sql-logo{
-    width:170px;
+    margin-top:20px;
+    width:135px;
 }
 
 
 .section-skills{
-    height:1250px;
+    height:1330px;
     background:var(--z4);
 }
 
@@ -539,7 +577,7 @@ a>.btn-cv{
 }
 .td-figure> img{
     /* transform: rotateX(20deg) rotateY(-20deg) rotateZ(3deg); */
-    transition: .3s;
+    transition: .3s; 
 }
     
 .td-figure:hover img{
@@ -606,13 +644,26 @@ svg {
 
 }
 
-.contorno-skills-2:hover{
+@media (hover: hover){
+	.contorno-skills-2:hover{
+        border:1px solid var(--bs-indigo);
+        background:var(--whiteYT);
+        transition: .6s;
+    }
+    
+    .contorno-skills-2:hover svg{
+        fill:var(--bs-indigo);
+        transition:.4s;
+        animation:zoom-pop .6s ease;
+    }
+}
+.contorno-skills-2:active{
     border:1px solid var(--bs-indigo);
     background:var(--whiteYT);
     transition: .6s;
 }
 
-.contorno-skills-2:hover svg{
+.contorno-skills-2:active svg{
     fill:var(--bs-indigo);
     transition:.4s;
     animation:zoom-pop .6s ease;
@@ -672,9 +723,9 @@ svg {
     /* background: rgba(102, 16, 242, 0.35); */
     /* background: rgb(34,39,80); */
     /* background: linear-gradient(180deg, rgba(202, 203, 207, 0) 2%, rgba(0,0,0,0.41) 100%); */
-    /* background: rgba(0, 0, 0, 0.41); */
-    background: rgb(255,255,255);
-background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9051995798319328) 75%);
+    background: rgba(0, 0, 0, 0.5);
+    /* background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9051995798319328) 75%); */
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     transform:translateY(-470px);
@@ -733,7 +784,28 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9051995
     fill:var(--bs-indigo);
 }
 
-
+@media (hover: hover){
+	/* .card-project:hover img{
+        transform:translateY(20px) scale(1.1);
+        transition:.3s;
+    }
+    
+    .card-project:hover .glass{
+        transition:.3s;
+        opacity:1;
+    } */
+    
+    
+    .btn-glass:hover{
+        background:var(--bs-indigo);
+        color:var(--bs-light);
+        border:1px solid var(--bs-light);
+        transition:.3s;
+    } 
+    .btn-glass:hover .svg-git{
+        fill:var(--bs-light);
+    }
+}
 .card-project:hover img{
     transform:translateY(20px) scale(1.1);
     transition:.3s;
@@ -745,13 +817,13 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9051995
 }
 
 
-.btn-glass:hover{
+.btn-glass:active{
     background:var(--bs-indigo);
     color:var(--bs-light);
     border:1px solid var(--bs-light);
     transition:.3s;
 } 
-.btn-glass:hover .svg-git{
+.btn-glass:active .svg-git{
     fill:var(--bs-light);
 }
 
@@ -776,8 +848,8 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9051995
     width:60%;
     margin:auto;
     margin-top:60px;
+    text-align:justify;
 
-    /* transform:translateY(30px); */
 }
 
 .form-contact{
@@ -834,8 +906,10 @@ textarea::placeholder{
 /*--------------------------------- Footer ---------------------------------*/
 
 footer{
+    width:100%;
     height:250px;
     background:var(--dark-beauty-2);
+    margin:0;
 }
 
 .volver-inicio{
@@ -859,7 +933,17 @@ footer{
     width:100%;
 }
 
-.volver-inicio:hover{
+
+@media (hover: hover){
+	.volver-inicio:hover{
+        transition:.3s;
+        transform:translateY(-30px) scale(1.05);
+        box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
+        -webkit-box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
+        -moz-box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
+    }
+}
+.volver-inicio:active{
     transition:.3s;
     transform:translateY(-30px) scale(1.05);
     box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
@@ -867,9 +951,14 @@ footer{
     -moz-box-shadow: 2px 15px 20px 1px rgba(0,0,0,0.53);
 }
 
+.row-problematico{
+    width:100%;
+    /* margin:auto; */
+}
+
 .vidrio{
     width:100%;
-    margin-left:12px;
+    margin-left:11px;
     height:150px;
     transform:translateY(40px);
     background: rgba(30, 36, 44, 0.41);
@@ -890,6 +979,7 @@ footer{
 .contenedor-icons{
     height:190px;
     margin:auto;
+    max-width:80%;
 
 }
 
@@ -899,6 +989,7 @@ footer{
     width:100px;
     z-index:0;
     transition:.5s;
+    margin-left:20px;
 
 }
 
@@ -913,7 +1004,23 @@ footer{
     
 }
 
+/* Iconos del footer */
+@media (hover: hover){
+	.icon-container:hover .icon{
+        animation:icons-pop .5s ease;
+        transition:.5s; 
+        z-index:2;
+    
+    }
+}
+/* borrar el hover mas tarde si hace falta */
 .icon-container:hover .icon{
+        animation:icons-pop .5s ease;
+        transition:.5s; 
+        z-index:2;
+    
+    }
+.icon-container:active .icon{
     animation:icons-pop .5s ease;
     transition:.5s; 
     z-index:2;
@@ -975,5 +1082,885 @@ footer{
 .icon>a>svg{
     margin:auto;
     width:55%;
+}
+
+
+
+/* ------------------------------------------Seccion de media querys------------------------------------------ */
+/* Escritorio extra grande */
+@media only screen and (min-width: 1200px){
+    
+    /*----------------------------Barra de Navegacion----------------------------*/
+    
+    .active-item{           /*Para utilizar en js*/
+        color:var(--bs-danger) !important;
+        transform: translateX(0) scale(1.05) !important;
+    }
+}
+
+/* Escritorio grande */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+    /*----------------------------Barra de Navegacion----------------------------*/
+
+    .active-item{           /*Para utilizar en js*/
+        color:var(--bs-danger) !important;
+        transform: translateX(0) scale(1.05) !important;
+    }
+    
+}
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    
+   
+    /*----------------------------Seccion sobre mi----------------------------*/
+    p, li{
+        font-size:15px;
+    }
+    
+    
+    .section-about-me{
+        height:755px;
+    }
+    .section-about-me>.container{
+        min-width:95% !important;
+    }
+
+    .contenedor-about-me{
+        padding-top:40px;
+    }
+    
+    .contenedor-about-me .row{
+        padding-top:20px;
+    }
+    
+    .info-about-me>h3{
+        text-align:left;
+    }
+
+    /*----------------------------Seccion habilidades----------------------------*/
+
+    .section-skills{
+        height:1530px;
+    }
+
+    .habilidades-2{
+    margin-top:40px;
+    }
+   
+    /*----------------------------Seccion proyectos----------------------------*/
+
+    .section-projects{
+        height:750px;
+    }
+
+    /*----------------------------Seccion contactos----------------------------*/
+
+    .section-contact{
+    height:750px;
+    }
+    .contenedor-contact>p{
+        width:80%;
+        margin-top:40px;
+
+    }
+
+}
+
+/* Tablets y phablets */
+@media only screen and (min-width: 576px) and (max-width: 767px){
+
+    
+    p, li{
+        font-size:13px;
+    }
+
+/*----------------------------Sobre mi----------------------------*/
+    .section-about-me{
+        height:940px;
+    }
+    .contenedor-about-me{
+        padding-top:30px;
+    }
+    .contenedor-about-me .row{
+        padding-top:0;
+    }
+    .pic-of-me{
+        width:250px;
+        height:250px;
+        margin:30px auto;
+        margin-top:30px;
+    }
+    
+    .sombra{
+        
+        width:180px;
+        
+        animation: efectoSombra 3s ease infinite;
+        animation-delay: .5s;
+    }
+      
+    @keyframes efectoSombra{
+        0%{
+            width:160px;
+            box-shadow:2px -10px 5px var(--bs-black);
+        }
+        50%{
+            width:180px;
+            box-shadow:2px -10px 5px #000000;
+    
+        }
+        100%{
+            width:160px;
+            box-shadow:2px -10px 5px var(--bs-black);
+    
+        }
+    }
+
+    .social-media{
+        margin:auto;
+        width:70%;  
+    }
+    
+
+    .info-about-me{
+        padding:30px 0;
+        
+    }
+
+
+    /*----------------------------Seccion habilidades----------------------------*/
+
+
+    .section-skills{
+        height:1570px;
+    }
+    
+    .contenedor-skills{
+        padding-top:70px;
+    }
+    
+    .contenedor-logos{
+        margin-top:50px;
+    }
+
+    .habilidades-2{
+        margin-top:40px;
+    }
+    
+    .columns-skills-2 p{
+        font-size:13px;
+    }
+
+    .contorno-skills-2{
+        height:100px;
+        width:100px;    
+    }
+    
+    svg {
+        width:50%;
+    }
+    
+    /*----------------------------Seccion proyectos----------------------------*/
+
+    .section-projects{
+        height:570px;
+    }
+
+    .contenedor-projects{
+        padding-top:70px;
+    }
+
+    /* project-cards */
+
+    .card-project{
+        width:500px;
+        height:280px;
+   
+    }
+    
+    
+    .glass{
+        width:100%;
+        
+        transform:translateY(-290px);
+        height:300px;
+    
+    }
+
+    .card-project:hover img{
+        transform:translateY(10px) scale(1.1);
+
+        }
+    
+    .contenedor-info-glass{
+        height:80%;
+    }
+
+    .contenedor-info-glass p{
+        font-size:13px;
+        text-align:left;
+
+    }
+    .contenedor-info-glass li{
+        font-size:11px;
+        text-align:left;
+    }
+    
+
+    .contenedor-btn-glass{
+        width:150px;
+        margin:auto;
+        border-radius: 500px;
+    }
+    
+    .btn-glass{
+       
+        width:150px;
+        padding-top:5px;
+        padding-bottom:5px;
+        font-size: 14px;
+    }
+
+
+
+    /*----------------------------Seccion contactos----------------------------*/
+
+    .section-contact{
+        height:750px;
+    }
+    .contenedor-contact{
+        padding-top:70px;
+    }
+    .contenedor-contact>p{
+        width:100%;
+        margin-top:40px;
+        font-size:13px;
+    }
+
+
+    /*----------------------------Seccion Footer----------------------------*/
+
+
+    .vidrio{
+        width:100%;
+        margin-left:12px;
+        height:150px;
+        transform:translateY(40px);
+        background: rgba(30, 36, 44, 0.41);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        z-index:0;
+        position:absolute;
+    }
+    
+    .vidrio>p{
+        margin-top:60px;
+        font-size:medium;
+    }
+
+
+
+    /* Iconos de redes sociales */
+
+    .icon-container{
+        z-index:1;
+    }
+
+    .icon{
+        z-index:2;
+        position:relative;
+    }
+
+    /* Iconos del footer */
+    @media (hover: hover){
+	    .icon-container:hover .icon{
+            animation:icons-pop .5s ease;
+            transition:.5s; 
+            z-index:2;    
+        }
+    }   
+    /* hover para qeu no haga nada */
+    .icon-container:hover .icon{
+        animation:none;
+        transition:none; 
+        z-index:1;   
+    }
+    .icon-container:active .icon{
+        animation:none;
+        transition:none; 
+        z-index:1;
+    }
+
+}
+
+/*Celulares*/
+@media only screen and (max-width: 575px){
+
+/*----------------------------Ininio----------------------------*/
+
+
+    p, li{
+        font-size:12px;
+    }
+    
+
+    .banner-text h2, i{
+        font-size:16pt;
+    }
+    .banner-text h1{
+        font-size:17pt;
+    }
+
+   
+    .btn-link{
+        width:200px;
+        margin:auto;
+        margin-top:20px;
+    
+    }
+    
+    .btn-cv{
+        padding-top:7px;
+        padding-bottom:7px;
+    }
+
+
+
+/*----------------------------Sobre mi----------------------------*/
+    .section-about-me{
+        height:970px;
+    }
+    .contenedor-about-me{
+        padding-top:40px;
+    }
+    .contenedor-about-me .row{
+        padding-top:0;
+    }
+    .pic-of-me{
+        width:250px;
+        height:250px;
+        margin:30px auto;
+        margin-top:30px;
+    }
+    
+    .sombra{
+        
+        width:180px;
+        
+        animation: efectoSombra 3s ease infinite;
+        animation-delay: .5s;
+    }
+      
+    @keyframes efectoSombra{
+        0%{
+            width:160px;
+            box-shadow:2px -10px 5px var(--bs-black);
+        }
+        50%{
+            width:180px;
+            box-shadow:2px -10px 5px #000000;
+    
+        }
+        100%{
+            width:160px;
+            box-shadow:2px -10px 5px var(--bs-black);
+    
+        }
+    }
+
+    .social-media{
+        margin:auto;
+        width:70%;  
+    }
+    
+
+    .info-about-me{
+        padding:20px  0;
+
+        margin: auto 20px;
+    }
+
+    .info-about-me h3{
+        text-align:left;
+        font-size:19px;
+    }
+    .info-about-me li{
+        font-size:12px;
+    }
+
+    /*----------------------------Seccion habilidades----------------------------*/
+
+
+    .section-skills{
+        height:1360px;
+    }
+    
+    .contenedor-skills{
+        padding-top:70px;
+    }
+    
+    .contenedor-logos{
+        margin-top:20px;
+    }
+    
+    .td-figure{
+        width:80%;
+    }
+
+    .tooltip{
+        transform:translate(0px, -50px);
+    }
+
+    .td-figure:hover .tooltip{
+        transform:translate(0px, -100px);
+   
+    }
+
+    /* imagenes de lenguajes */
+    #html-logo{
+        margin-top:25px;
+        width:95px;
+        margin-bottom:-30px;
+
+    }
+    #css-logo{
+        width:115px;
+        margin-bottom:-30px;
+
+    }
+    #js-logo{
+        width:90px;
+        margin-bottom:-30px;
+
+    }
+    #git-logo{
+        width:105px;
+        margin-bottom:-30px;
+
+    }
+    #php-logo{
+        width: 130px;
+        margin-bottom:-30px;
+
+    }
+    #sql-logo{
+        width:115px;
+        margin-bottom:-30px;
+    }
+
+
+    .habilidades-2{
+        margin-top:60px;
+    }
+    
+    .contorno-skills-2{
+        height:90px;
+        width:90px;    
+    }
+    
+    svg {
+        width:50%;
+    }
+    
+    .columns-skills-2 p{
+        font-size:12px;
+    }
+    .columns-skills-2 h4{
+        font-size:1.1rem;
+    }
+
+
+    /*----------------------------Seccion proyectos----------------------------*/
+    
+    .section-projects{
+        height:570px;
+    }
+
+    .contenedor-projects{
+        padding-top:70px;
+    }
+
+    /* project-cards */
+
+    .card-project{
+        width:500px;
+        height:280px;
+   
+    }
+    
+    .card-project:hover img{
+        transform:translateY(10px) scale(1.1);
+ 
+    }
+    .glass{
+        width:100%;
+        
+        transform:translateY(-290px);
+        height:300px;
+    
+    }
+    
+    .contenedor-info-glass{
+        height:80%;
+    }
+
+    .contenedor-info-glass p{
+        font-size:11px;
+        text-align:left;
+
+    }
+    .contenedor-info-glass h2{
+        font-size:16px;
+    }
+
+
+    .contenedor-btn-glass{
+        width:150px;
+        margin:auto;
+        border-radius: 500px;
+    }
+    
+    .btn-glass{
+       
+        width:150px;
+        padding-top:5px;
+        padding-bottom:5px;
+        font-size: 14px;
+    }
+
+    /*----------------------------Seccion contactos----------------------------*/
+
+    .section-contact{
+        height:750px;
+    }
+    .contenedor-contact{
+        padding-top:70px;
+    }
+    .contenedor-contact>p{
+        width:100%;
+        margin-top:40px;
+
+    }
+
+    input[type="email"], .input-asunto{
+        width:100%;
+    }
+
+     /*----------------------------Seccion Footer----------------------------*/
+
+
+     .vidrio{
+        width:100%;
+        margin-left:12px;
+        height:150px;
+        transform:translateY(40px);
+        background: rgba(30, 36, 44, 0.41);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        z-index:0;
+        position:absolute;
+    }
+    
+    .vidrio>p{
+        margin-top:90px;
+
+    }
+
+
+
+    /* Iconos de redes sociales */
+
+    .icon-container{
+        z-index:1;
+    }
+
+    .icon{
+        z-index:2;
+        position:relative;
+    }
+
+    /* Iconos del footer */
+    @media (hover: hover){
+	    .icon-container:hover .icon{
+            animation:icons-pop .5s ease;
+            transition:.5s; 
+            z-index:2;    
+        }
+    }   
+    /* hover para qeu no haga nada */
+    .icon-container:hover .icon{
+        animation:none;
+        transition:none; 
+        z-index:1;   
+    }
+    .icon-container:active .icon{
+        animation:none;
+        transition:none; 
+        z-index:1;
+    }
+
+}
+
+
+/* Mediaqueries especial para el carrousel */
+@media only screen and (max-width:465px){
+
+    
+    .section-projects{
+        height:540px;
+    }
+
+    .contenedor-projects{
+        padding-top:70px;
+    }
+
+    /* project-cards */
+
+    .card-project{
+        width:400px;
+        height:240px;
+   
+    }
+    .card-project:hover img{
+        transform:translateY(10px) scale(1.1);
+        transition:.3s;
+    }
+    
+    .glass{
+        width:100%;
+        
+        transform:translateY(-290px);
+        height:300px;
+    
+    }
+    
+    .contenedor-info-glass{
+        margin:auto;
+
+        height:85%;
+    }
+
+    .contenedor-info-glass p{
+        font-size:10px;
+        text-align:left;
+
+    }
+    .contenedor-info-glass h2{
+        font-size:15px;
+    }
+    
+
+    .contenedor-btn-glass{
+        width:100px;
+
+    }
+    
+    .btn-glass{
+        
+        width:100px;
+        padding:4px 3px;
+        
+        font-size: 12px;
+    }
+}
+/*Celulares angostos*/
+
+@media only screen and (max-width:365px){
+    p, li{
+        font-size:11px;
+    }
+    .info-about-me li{
+        font-size:11px;
+    }
+    /*----------------------------Ininio----------------------------*/
+
+
+
+    .banner-text h2, i{
+        font-size:13pt;
+    }
+    .banner-text h1{
+        font-size:14pt;
+    }
+
+   
+    .btn-link{
+        width:150px;
+        margin:auto;
+        margin-top:20px;
+    
+    }
+    
+    .btn-cv{
+
+        padding-top:5px 2px;
+        font-size: 16px;
+        width:150px;
+
+    }
+
+
+    /*----------------------------Seccion sobre mi----------------------------*/
+    
+    .section-about-me{
+        height:930px;
+    }
+    .contenedor-about-me{
+        padding-top:40px;
+    }
+    .contenedor-about-me .row{
+        padding-top:0;
+    }
+    .pic-of-me{
+        width:200px;
+        height:200px;
+        margin:30px auto;
+        margin-top:30px;
+    }
+    
+    .sombra{
+        
+        width:130px;
+        
+        animation: efectoSombra 3s ease infinite;
+        animation-delay: .5s;
+    }
+      
+    @keyframes efectoSombra{
+        0%{
+            width:110px;
+            box-shadow:2px -10px 5px var(--bs-black);
+        }
+        50%{
+            width:130px;
+            box-shadow:2px -10px 5px #000000;
+    
+        }
+        100%{
+            width:110px;
+            box-shadow:2px -10px 5px var(--bs-black);
+    
+        }
+    }
+
+    .social-media{
+        margin:auto;
+        width:70%;  
+    }
+    
+    .sm-icon{
+        height:40px;
+        width:40px;
+        
+    }
+    
+    .sm-icon>a{    
+       
+        height:40px;
+        width:40px;
+
+    
+    }
+    
+    .sm-icon>a>svg{
+        margin:auto;
+        width:100%;
+        transition:.3s;
+    
+    }
+    /*----------------------------Proyectos----------------------------*/
+
+    .card-project{
+        width:350px;
+        height:240px;
+   
+    }
+    .glass{
+        width:100%;
+        
+        transform:translateY(-201px);
+        height:220px;
+    
+    }
+    .contenedor-info-glass{
+        margin:auto;
+
+        height:90%;
+    }
+
+    /*----------------------------habilidades----------------------------*/
+
+    .habilidades-2 p, li{
+        font-size:11px;
+    }
+
+    /*-------------------------------Footer----------------------------*/
+    footer p, li{
+        font-size:12px;
+    }
+}
+
+
+
+/*Celulares extra angostos*/
+@media only screen and (max-width: 352px){
+    
+    /*----------------------------Ininio----------------------------*/
+
+
+
+    .banner-text h2, i{
+        font-size:13pt;
+    }
+    .banner-text h1{
+        font-size:14pt;
+    }
+
+   
+    .btn-link{
+        width:150px;
+        margin:auto;
+        margin-top:20px;
+    
+    }
+    
+    .btn-cv{
+
+        padding-top:5px 2px;
+        font-size: 16px;
+        width:150px;
+
+    }
+    /*----------------------------Seccion Sobre mi----------------------------*/
+
+
+    /*----------------------------Seccion habilidades----------------------------*/
+
+
+    /* imagenes de lenguajes */
+    /* #html-logo{
+        width:90px;
+    }
+    #css-logo{
+        width:115px;
+    }
+    #js-logo{
+        width:90px;
+    }
+    #git-logo{
+        width:105px;
+    }
+    #php-logo{
+        width:100px;
+    }
+    #sql-logo{
+        width:100px;
+    } */
 }
 

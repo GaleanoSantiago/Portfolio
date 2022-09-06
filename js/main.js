@@ -19,8 +19,8 @@ const contenedorIcons = document.querySelectorAll(".icon-container");
 // });
 
 //Para saber la resolucion de pantalla
-// console.log("La altura de tu pantalla es de " + screen.height);
-// console.log("La ancho de tu pantalla es de " + screen.width); 
+console.log("La altura de tu pantalla es de " + screen.height);
+console.log("La ancho de tu pantalla es de " + screen.width); 
 
 //          Prueba fallida para automatizar el proceso de seleccion de items del navbar
 // itemsMenu.forEach((item)=>{
