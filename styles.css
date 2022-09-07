@@ -1440,7 +1440,7 @@ footer{
 
 /*----------------------------Sobre mi----------------------------*/
     .section-about-me{
-        height:970px;
+        height:940px;
     }
     .contenedor-about-me{
         padding-top:40px;
@@ -1489,7 +1489,7 @@ footer{
     .info-about-me{
         padding:20px  0;
 
-        margin: auto 20px;
+        margin: auto 10px;
     }
 
     .info-about-me h3{
@@ -1504,7 +1504,7 @@ footer{
 
 
     .section-skills{
-        height:1360px;
+        height:1300px;
     }
     
     .contenedor-skills{
@@ -1723,6 +1723,14 @@ footer{
 /* Mediaqueries especial pantallas pequeñas */
 @media only screen and (max-width:465px){
 
+    /*----------------------------Seccion habilidades----------------------------*/
+
+    .section-skills{
+        height:1350px;
+    }
+
+
+    /*----------------------------Seccion proyectos----------------------------*/
     
     .section-projects{
         height:540px;
@@ -1788,10 +1796,10 @@ footer{
         font-size:11px;
     }
     .info-about-me li, p{
-        font-size:11.4px;
+        font-size:12px;
     }
     .contenedor-contact p{
-        font-size:11.5px;
+        font-size:12px;
     }
     /*----------------------------Ininio----------------------------*/
 
@@ -1895,7 +1903,9 @@ footer{
         transition:.3s;
     
     }
-
+    .info-about-me{
+        margin: auto 0;
+    }
 
     /*----------------------------Seccion habilidades----------------------------*/
 
@@ -1971,7 +1981,9 @@ footer{
 
 
     /*----------------------------Seccion habilidades----------------------------*/
-
+    .section-skills{
+        height:1355px;
+    }
 
     /* imagenes de lenguajes */
     /* #html-logo{
@@ -2029,6 +2041,31 @@ footer{
         width:13%;
         fill:var(--bs-indigo);
         display:none
+    }
+    *--------------------------------- Contacto ---------------------------------*/
+
+  
+    
+    input{
+        padding:5px;
+        font-size:12px;
+    }
+    
+
+    input::placeholder{
+        font-size:12px;
+    
+    }
+    
+    textarea{
+
+        font-size:12px;
+    }
+    
+    textarea::placeholder{
+
+        font-size:12px;
+
     }
 
 
