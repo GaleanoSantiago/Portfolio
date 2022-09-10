@@ -35,8 +35,8 @@
                 <div class="text-light">
                     <div class="btn-link text-decoration-none" data-aos="fade-zoom-in"
                     data-aos-easing="ease-out-back"
-                    data-aos-delay="700"
-                    data-aos-once="true">  
+                    data-aos-delay="2000"
+                    data-aos-once="true">
                     <a href="https://drive.google.com/file/d/1Ja4gbmyHLcFbE2LT6PCSxB0obqYR4cjJ/view?usp=sharing"  target="_blank">
                     <div class="btn-cv">
                             Ver CV
@@ -61,7 +61,7 @@
         
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#" id="itemInicio">Inicio</a>
+            <a class="nav-link active-item" aria-current="page" href="#" id="itemInicio">Inicio</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#sobre-mi" id="itemAbout">Sobre Mi</a>
@@ -648,7 +648,9 @@
                     <div class="">
                         <textarea required class="" name="mensaje" id="mensaje" cols="30" rows="8" placeholder="Deje su mensaje acá"></textarea>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center" data-aos="fade-up" 
+                    data-aos-delay="450"
+                    data-aos-once="true">
                         <button type="submit" class="btn-cv btn-submit" id="button">Enviar Mensaje</button>
                     </div>
                   </form>
@@ -760,6 +762,8 @@ integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52n
         AOS.init({
             // easing: 'ease-out-back',
             // duration: 1000
+            // one:"true"
+            // data-aos-once="true"
         });
     </script>
 

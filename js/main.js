@@ -18,9 +18,9 @@ const contenedorIcons = document.querySelectorAll(".icon-container");
 //     speed: 400
 // });
 
-//Para saber la resolucion de pantalla
-console.log("La altura de tu pantalla es de " + screen.height);
-console.log("La ancho de tu pantalla es de " + screen.width); 
+            //Para saber la resolucion de pantalla
+// console.log("La altura de tu pantalla es de " + screen.height);
+// console.log("La ancho de tu pantalla es de " + screen.width); 
 
 //          Prueba fallida para automatizar el proceso de seleccion de items del navbar
 // itemsMenu.forEach((item)=>{
@@ -52,22 +52,32 @@ addEventListener("scroll",()=>{
         menu.classList.remove("fixed");
     }
 
-    //Prueba animacion al hacer scroll
+    //Prueba animacion subrayados al hacer scroll
 
     let subrayado = document.getElementById("subrayado");
     let subrayado2=document.getElementById("subrayado-2");
+    let subrayado3 = document.getElementById("subrayado-3");
+    let subrayado4 =document.getElementById("subrayado-4");
     let posicionObjt1 = subrayado.getBoundingClientRect().top;
     let posicionObjt2 = subrayado2.getBoundingClientRect().top;
-    // console.log(posicionObjt1);
+    let posicionObjt3 = subrayado3.getBoundingClientRect().top;
+    let posicionObjt4 = subrayado4.getBoundingClientRect().top;
+    // console.log(posicionObjt3);
     let tamanoDePantalla=window.innerHeight;
-    //console.log(tamanoDePantalla);
+    // console.log("Tamaño de pantalla", (tamanoDePantalla - 100));
 
-    // if(posicionObjt1 < tamanoDePantalla){
-    //     subrayado.style.animation = "fade-sub 2s ease";
-    // }
-    // if(posicionObjt2 < tamanoDePantalla){
-    //     subrayado2.style.animation = "fade-sub 2s ease";
-    // }
+    if(posicionObjt1 < tamanoDePantalla){
+        subrayado.style.animation = "fade-sub 2s ease";
+    }
+    if(posicionObjt2 < tamanoDePantalla){
+        subrayado2.style.animation = "fade-sub 2s ease";
+    }
+    if(posicionObjt3 < tamanoDePantalla){
+        subrayado3.style.animation = "fade-sub 2s ease";
+    }
+    if(posicionObjt4 < tamanoDePantalla){
+        subrayado4.style.animation = "fade-sub 2s ease";
+    }
     
     activarItemsMenu(tamanoDePantalla);
 
