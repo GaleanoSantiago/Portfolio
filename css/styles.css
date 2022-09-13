@@ -223,7 +223,7 @@ nav.fixed {
     width: 100%;
     height: 100vh;
     text-align: center;
-    background: linear-gradient(rgba(5,7,8, 0.8), rgba(5,7,8, 0.8)), url("../img/fondo3.jpg");
+    background: linear-gradient(rgba(5,7,8, 0.8), rgba(5,7,8, 0.8)), url("../img/fondo3.webp");
     /*Parallax*/
     background-attachment: fixed;
     background-position:center;
@@ -353,9 +353,11 @@ a>.btn-cv{
     width:300px;
     height:300px;
     border-radius:500px;
+    background:url("../img/prueba3.webp");
+    background-size:110%;
+    background-position:-30% 35%;
     overflow:hidden;
     margin:40px auto;
-    /* box-shadow:2px 20px 20px hsla(0,0%,0%,0.25); */
     animation: flotar 3s ease infinite;
     animation-delay: .5s;
     
@@ -548,15 +550,15 @@ a>.btn-cv{
 /* imagenes de lenguajes */
 #html-logo{
     margin-top:20px;
-    width:110px;
+    width:122px;
     }
 #css-logo{
-    margin-top:20px;
+    margin-top:15px;
     width:135px;
 }
 #js-logo{
     margin-top:20px;
-    width:110px;
+    width:130px;
 }
 #git-logo{
     margin-top:20px;
@@ -564,6 +566,8 @@ a>.btn-cv{
     width:125px;
 }
 #php-logo{
+    margin-top:20px;
+
     width:150px;
 }
 #sql-logo{
@@ -588,7 +592,7 @@ a>.btn-cv{
 
 /*      ------------      efecto logos rotate    ------------      */
 .td-figure{
-    perspective: 1500px;
+    /* perspective: 1500px; */
     width:190px;
     margin:auto;
 }
