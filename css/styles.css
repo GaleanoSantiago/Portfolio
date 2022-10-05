@@ -1254,6 +1254,10 @@ footer{
         height:80%;
     }
 
+    .contenedor-info-glass h2{
+        font-size:22px;
+    }
+
     .contenedor-info-glass p{
         font-size:13px;
         text-align:left;
