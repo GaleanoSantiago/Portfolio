@@ -11,6 +11,16 @@ const itemsMenu = document.querySelectorAll(".nav-link");
 const contenedorIcons = document.querySelectorAll(".icon-container");
  
 
+
+/*---------------Pantalla Preloader---------------*/
+
+//  Load. No se pone el window
+addEventListener("load",()=>{
+   document.getElementById("loader").classList.toggle("loader2");
+   document.querySelector(".btn-cv").classList.add("btn-animation");
+})
+
+
 // Inicializacion de Vanilla-tilt.js
 
 // VanillaTilt.init(document.querySelector(".box"), {

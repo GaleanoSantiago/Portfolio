@@ -162,6 +162,102 @@ body{
     }
 }
 
+/*-------------------------------- Loader ---------------------------*/
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 2px solid #fff;
+    box-shadow: inset 0px 0px 15px 5px rgba(67,195,255,.2), 0px 0px 10px 1px rgba(67,195,255,.15);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  .lds-ring span{       /*Letras de cargando*/
+    color:var(--bs-light);
+    transform:translateY(50px);
+  }
+
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+/*  Loader version 2. No es responsive */
+
+/* .loader-triangle-3 polygon{
+	stroke:#ffeb3b;
+	stroke:#fff;
+	stroke-dasharray: 17;
+	animation: anm-tr-3-move 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+}
+
+@keyframes anm-tr-3-move{
+	to{
+		stroke-dashoffset: -136;
+	}
+} */
+
+
+.loader{
+    background:var(--z4);
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100000;
+
+    /*-----En caso de hacer animacion con clip-path-----/*
+    
+    /* clip-path: circle(150% at 100% 0); */
+    /* transition: clip-path 0.5s ease-in-out; */
+}
+
+.loader2{
+    /* --Para que desaparezca */
+    display:none;
+
+    /*-----En caso de hacer animacion con clip-path-----/*
+    /* clip-path: circle(0% at 100% 0); */
+
+    /* animation:fade-load .8s ease; */
+}
+/* @keyframes fade-load {
+    0%{
+        display:flex;
+    }
+    100%{
+        display:none;
+    }
+} */
 /*-------------------------------- Barra de Navegacion ---------------------------*/
 
 #menu{
@@ -253,8 +349,12 @@ nav.fixed {
     font-size: 18px;
     width:200px;
     border-radius: .5rem;
+    /* animation: button-cv 2s ease;
+    animation-delay:2.5s; */
+}
+.btn-animation{
     animation: button-cv 2s ease;
-    animation-delay:2.2s;
+    animation-delay:2.5s;
 }
 
 a{
