@@ -105,7 +105,7 @@
 body{
     font-family: sans-serif;
     max-width: 100% !important;
-    overflow-x: hidden !important;
+    /* overflow-x: hidden !important; */
 }
 
 .total-space{
@@ -745,19 +745,22 @@ svg {
 
 .section-projects{
     background:var(--z1);
-    height:800px;
+    /* height:800px; */
+    padding:80px 0;
 }
-
+/* 
 .contenedor-projects{
     padding-top:80px;
-}
+} */
 
 .card-project{
-    width:800px;
-    height:470px;
+    width:100%;
+    height:300px;
     margin:auto;
     margin-top:40px;
     overflow:hidden;
+    border:1px solid var(--bs-white);
+    border-radius:10px;
 }
 
 .card-project>img{
@@ -765,31 +768,26 @@ svg {
     transition:.3s;
     z-index:0;          /*Para que este por debajo del glassmorfismo*/
     position:relative;
+    border-radius:10px;
 
 
 }
 
 .glass{
-    /* linear-gradient(180deg, rgba(34,39,80,0.3757878151260504) 30%, rgba(102,16,242,0.35) 100%); */
-    /* background: rgba(102, 16, 242, 0.35); */
-    /* background: rgb(34,39,80); */
-    /* background: linear-gradient(180deg, rgba(202, 203, 207, 0) 2%, rgba(0,0,0,0.41) 100%); */
     background: rgba(0, 0, 0, 0.55);
-    /* background: rgb(255,255,255);
-background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9051995798319328) 75%); */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    transform:translateY(-470px);
-    height:500px;
+    transform:translateY(-360px);
+    height:350px;
     z-index:2;          /*Para que este por encima de la imagen*/
     position:relative;
     opacity:0;          /*Para que el glass sea visible o no*/
     transition:.3s;
-
+    /* border:1px solid #fff; */
 }
 
 .contenedor-info-glass{
-    height:85%;
+    height: 95%;
 }
 
 .contenedor-info-glass h2{
@@ -863,7 +861,7 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9051995
     }
 }
 .card-project:hover img{
-    transform:translateY(20px) scale(1.1);
+    transform: scale(1.1);
     transition:.3s;
 }
 
@@ -1207,9 +1205,58 @@ footer{
    
     /*----------------------------Seccion proyectos----------------------------*/
 
-    .section-projects{
+    /* .section-projects{
         height:750px;
+    } */
+
+    .card-project{
+        width:100%;
+        height:190px;
+        /* overflow:visible; */
     }
+    
+    .glass{
+       
+        transform:translateY(-200px);
+        height:200px;
+        z-index:2;          /*Para que este por encima de la imagen*/
+        position:relative;
+        opacity:0;          /*Para que el glass sea visible o no*/
+        transition:.3s;
+        /* border:1px solid #fff; */
+    }
+    
+    .contenedor-info-glass{
+        height: 95%;
+    }
+    /* .contenedor-info-glass{
+        height:80%;
+    } */
+
+    .contenedor-info-glass p{
+        font-size:11px;
+        text-align:left;
+
+    }
+    .contenedor-info-glass h2{
+        font-size:16px;
+    }
+
+
+    .contenedor-btn-glass{
+        width:150px;
+        margin:auto;
+        border-radius: 500px;
+    }
+    
+    .btn-glass{
+       
+        width:150px;
+        padding-top:5px;
+        padding-bottom:5px;
+        font-size: 14px;
+    }
+
 
     /*----------------------------Seccion contactos----------------------------*/
 
@@ -1320,28 +1367,28 @@ footer{
     
     /*----------------------------Seccion proyectos----------------------------*/
 
-    .section-projects{
+    /* .section-projects{
         height:570px;
-    }
-
+    } */
+/* 
     .contenedor-projects{
         padding-top:70px;
-    }
+    } */
 
     /* project-cards */
 
     .card-project{
-        width:500px;
-        height:280px;
-   
+        width:100%;
+        height:290px;
+        /* overflow:visible; */
     }
     
     
     .glass{
         width:100%;
         
-        transform:translateY(-290px);
-        height:300px;
+        transform:translateY(-300px);
+        height:320px;
     
     }
 
@@ -1359,7 +1406,7 @@ footer{
     }
 
     .contenedor-info-glass p{
-        font-size:13px;
+        font-size:15px;
         text-align:left;
 
     }
@@ -1644,47 +1691,55 @@ footer{
 
     /*----------------------------Seccion proyectos----------------------------*/
     
-    .section-projects{
-        height:570px;
-    }
-
+    /* .section-projects{
+        height:auto;
+        padding-bottom:80px;
+    } */
+/* 
     .contenedor-projects{
         padding-top:70px;
-    }
+    } */
 
     /* project-cards */
 
     .card-project{
-        width:500px;
-        height:280px;
-   
+        width:100%;
+        height:300px;
+        /* overflow:visible; */
     }
     
-    .card-project:hover img{
-        transform:translateY(10px) scale(1.1);
- 
-    }
+
     .glass{
         width:100%;
         
-        transform:translateY(-290px);
-        height:300px;
+        transform:translateY(-340px);
+        height:400px;
     
     }
+
+    .card-project:hover img{
+        transform:translateY(10px) scale(1.1);
+
+        }
     
     .contenedor-info-glass{
-        height:80%;
+        height:85%;
+    }
+
+    .contenedor-info-glass h2{
+        font-size:22px;
     }
 
     .contenedor-info-glass p{
-        font-size:11px;
+        font-size:15px;
         text-align:left;
 
     }
-    .contenedor-info-glass h2{
-        font-size:16px;
+    .contenedor-info-glass li{
+        font-size:11px;
+        text-align:left;
     }
-
+    
 
     .contenedor-btn-glass{
         width:150px;
@@ -1792,18 +1847,18 @@ footer{
 
     /*----------------------------Seccion proyectos----------------------------*/
     
-    .section-projects{
+    /* .section-projects{
         height:540px;
-    }
-
+    } */
+/* 
     .contenedor-projects{
         padding-top:70px;
-    }
+    } */
 
     /* project-cards */
 
     .card-project{
-        width:400px;
+        width:100%;
         height:240px;
    
     }
@@ -1827,7 +1882,7 @@ footer{
     }
 
     .contenedor-info-glass p{
-        font-size:11px;
+        font-size:13px;
         text-align:left;
 
     }
@@ -1982,7 +2037,7 @@ footer{
     /*----------------------------Proyectos----------------------------*/
 
     .card-project{
-        width:350px;
+        /* width:350px; */
         height:240px;
    
     }
