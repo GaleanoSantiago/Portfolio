@@ -162,3 +162,60 @@ const activarItemsMenu = (tamanoDePantalla)=>{
         itemContact.classList.remove("active-item");
     }
 }
+
+
+/*--------------Prueba generar carousel-item dinamicamente--------------*/
+
+let contenedorCarousel = document.querySelector(".carousel-item-js");
+
+let fragmento = document.createDocumentFragment();
+let pruebaDiv = document.createElement("DIV");
+let pruebaDiv2 = document.createElement("DIV");
+let imgPrueba = document.createElement("img");
+
+// class Cards{
+//     constructor
+// }
+let cards = [{
+    number: "1",
+    img: "../img/css-logo.webp",
+    descripcion: "Sistema de ventas de stock"
+}]
+
+// new Cards = 
+
+let alumnos=[{
+    nombre:"Dolor Suffering",
+    email: "dolor@pain.com",
+    materia:"Fisica 3"
+},{
+    nombre:"Karina Guerrera",
+    email: "kar@pain.com",
+    materia:"Literatura"
+},{
+    nombre:"Jorge Ramirez",
+    email: "the_george@pain.com",
+    materia:"Matematica"
+},{
+    nombre:"Facundo Roberto",
+    email: "facu@pain.com",
+    materia:"Sexologia 2"
+},{
+    nombre:"Iron u u",
+    email: "hierro@pain.com",
+    materia:"Educacion fisica"
+}];
+
+// imgPrueba.src="./img/proyecto4.webp";
+// pruebaDiv.classList.add("contenedor-cards");
+// pruebaDiv2.classList.add("card-project");
+
+// pruebaDiv2.appendChild(imgPrueba);
+// pruebaDiv.appendChild(pruebaDiv2);
+// fragmento.appendChild(pruebaDiv);
+
+// contenedorCarousel.appendChild(fragmento);
+
+// for(i=0;){
+
+// }
