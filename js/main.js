@@ -7,6 +7,10 @@ const itemProjs = document.getElementById("itemProjects");
 const itemContact = document.getElementById("itemContacto");
 const itemsMenu = document.querySelectorAll(".nav-link");
 
+/*---------------Modal---------------*/
+const modal = document.querySelectorAll(".mdl");
+// console.log(modal);
+
 /*---------------Footer---------------*/
 const contenedorIcons = document.querySelectorAll(".icon-container");
  
@@ -116,6 +120,122 @@ contenedorIcons.forEach(icon => {
     });
 });
 
+/*--------------Prueba generar carousel-item dinamicamente--------------*/
+
+modal.forEach(mdl => {
+    const modalBody = document.querySelector(".modal-body");
+    const modalHeader = document.querySelector(".modal-header");
+    const modalFooter = document.querySelector(".modal-footer");
+    let valueMdl = mdl.value;
+    let infoModales = [
+    {
+        titulo: `CoinCoders`,
+        descripcion:`Sitio web realizado para una empresa 
+        de desarrollo de software. Totalmente responsive 
+        y con un formulario de contacto funcional. 
+        Desarrollada con una mezcla de css, bootstrap y javascript.`,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://galeanosantiago.github.io/coincoders/`,
+        codigo:`https://github.com/GaleanoSantiago/coincoders`
+
+    },
+    {
+        titulo:`Portafolio`,
+        descripcion:`Incluyo este mismo portafolio como un proyecto 
+        en mi galería debido al trabajo y esfuerzo que me tomó 
+        desarrollarlo hasta el nivel en el que se encuentra ahora. 
+        Este portafolio es completamente responsive y la mayoría de efectos 
+        y animaciones fueron creados por mí.`,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`#`,
+        codigo:`https://github.com/GaleanoSantiago/Portfolio`
+    },
+    {
+        titulo:`Calculadora de Dias`,
+        descripcion:`Sitio web interactivo, ingrese una fecha 
+        cualquiera y el programa mostrará la cantidad de días 
+        exactos que hay entre esa fecha y el presente. 
+        Los procesos llevados a cabo por el programa son realizados en JavaScript.`,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://galeanosantiago.github.io/DaysOfOurLife_js/`,
+        codigo:`https://github.com/GaleanoSantiago/DaysOfOurLife_js`
+
+    },
+    {
+        titulo:`Random User Generator`,
+        descripcion:`
+        Generador de usuario aleatorio creado con javascript y 
+        mediante la utilizacion de una API para la informacion 
+        de los usuarios. El color del background tambien cambia con cada usuario.`,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://galeanosantiago.github.io/randomUser/`,
+        codigo:`https://github.com/GaleanoSantiago/randomUser`
+    },
+    {
+        titulo:`Sistema de Venta`,
+        descripcion:`
+        CRUD desarrollado para un negocio de mi ciudad, 
+        el proyecto que se encuentra en el hosting es una versión 
+        sin los detalles del negocio en cuestión, y con algunas diferencias leves.`,
+        lenguajes: `HTML - CSS - JS - PHP - SQL`,
+        proyecto:`https://crud-galeano.000webhostapp.com/app/Registro_Local/index.php`,
+        codigo:`https://github.com/GaleanoSantiago/RegistroLocal`
+    },
+    {
+        titulo:`Sistema de Venta y Control de Stock`,
+        descripcion:`
+        CRUD de venta y control de stock para pymes. 
+        Una versión mucho más compleja y extensa que 
+        el sistema visto anteriormente. <br>
+        Usuarios: <br>
+        -Administrador: admin - admin <br>
+        -Cajero: Xpress - 12345        
+        `,
+        lenguajes: `HTML - CSS - JS - PHP - SQL`,
+        proyecto:`http://crudpro-galeano.epizy.com/Polirrubro/index.php`,
+        codigo:`https://github.com/GaleanoSantiago/systemCRUD`
+    }
+    ]
+    mdl.addEventListener("click", ()=>{
+        // console.log(valueMdl);
+        // console.log(infoModales[valueMdl].titulo);
+        // console.log(infoModales[valueMdl].descripcion);
+        
+        modalHeader.innerHTML = `
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">${infoModales[valueMdl].titulo}</h1>
+        <button type="button" class="bg-light btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        `;
+        modalBody.innerHTML = `
+        <p class="text-gray">${infoModales[valueMdl].descripcion}</p>
+        <p>Lenguajes Utilizados: <span class="text-gray">${infoModales[valueMdl].lenguajes}</span></p>
+        `;
+        let proyecto;
+        let target;
+        if(valueMdl==1){
+            proyecto = "#proyectos";
+            target = "";
+        }else{
+            proyecto = infoModales[valueMdl].proyecto;
+            target = "_blank";
+        }
+        modalFooter.innerHTML = `
+        <div class="contenedor-btn-glass">
+            <a href="${proyecto}" target="${target}" class="">
+                <div class="btn-glass btn-glass-inverso">Ver Proyecto</div>
+            </a>
+        </div>
+        <div class="contenedor-btn-glass">
+            <a href="${infoModales[valueMdl].codigo}" target="_blank">
+            <div class="btn-glass btn-glass-inverso">
+                <svg class="svg-git" viewBox="0 0 64 64" id="i-github" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-width="0" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" />
+                </svg> Ver Código</div>
+            </a>
+        </div>
+        `;
+
+    });
+});
 
 const activarItemsMenu = (tamanoDePantalla)=>{
     const inicio = document.getElementById("inicio");
