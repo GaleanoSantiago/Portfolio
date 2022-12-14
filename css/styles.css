@@ -129,7 +129,7 @@ body{
 }
 
 .text-gray{
-    color: var(--bs-gray-500);
+    color: var(--bs-gray-600);
 }
 
 .text-darkGrey{
@@ -672,7 +672,7 @@ a>.btn-cv{
 }
 
 .habilidades-2 p{
-    color:var(--bs-gray-500);
+    color:var(--bs-gray-600);
 }
 
 .contorno-skills-2{
