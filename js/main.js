@@ -120,7 +120,7 @@ contenedorIcons.forEach(icon => {
     });
 });
 
-/*--------------Prueba generar carousel-item dinamicamente--------------*/
+/*--------------Prueba generar los proyectos dinamicamente--------------*/
 
 modal.forEach(mdl => {
     const modalBody = document.querySelector(".modal-body");
@@ -194,6 +194,16 @@ modal.forEach(mdl => {
         lenguajes: `HTML - CSS - JS - PHP - SQL`,
         proyecto:`http://crudpro-galeano.epizy.com/Polirrubro/index.php`,
         codigo:`https://github.com/GaleanoSantiago/systemCRUD`
+    },
+    {
+        titulo:`Pagina Web ConstruCom`,
+        descripcion:`
+        Pagina web Página web creada para una constructora local, 
+        en conjunto con el equipo de trabajo de <a href="http://n7softwares.github.io/" class="text-primary" target="_blank">N7softwares</a>.
+        `,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://constructoracomercialsrl.com.ar/`,
+        codigo:`https://github.com/GaleanoSantiago/N7-softwares.git`
     }
     ]
     mdl.addEventListener("click", ()=>{
