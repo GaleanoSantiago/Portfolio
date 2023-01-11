@@ -198,7 +198,7 @@ modal.forEach(mdl => {
     {
         titulo:`Pagina Web ConstruCom`,
         descripcion:`
-        Pagina web Página web creada para una constructora local, 
+        Página web creada para una constructora local, 
         en conjunto con el equipo de trabajo de <a href="http://n7softwares.github.io/" class="text-primary" target="_blank">N7softwares</a>.
         `,
         lenguajes: `HTML - CSS - JS`,
