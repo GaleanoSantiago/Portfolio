@@ -59,7 +59,7 @@
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
     
-    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    /* --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     --bs-body-font-family: var(--bs-font-sans-serif);
@@ -81,7 +81,7 @@
     --bs-link-color: #0d6efd;
     --bs-link-hover-color: #0a58ca;
     --bs-code-color: #d63384;
-    --bs-highlight-bg: #fff3cd;
+    --bs-highlight-bg: #fff3cd; */
 
 
     --azulNavBar: rgb(17, 0, 255);
@@ -937,6 +937,15 @@ svg {
     animation:all .3s !important;
 }
 
+.pc-8{
+    background:url(../img/proyecto6md.webp);
+    background-size:cover;
+    background-position:50% 10%;
+}
+.pc-7{
+    background:url(../img/proyecto5.webp);
+    background-size:cover;
+}
 .pc-1{
     background:url(../img/proyecto1min.webp);
     background-size:cover;
@@ -1266,6 +1275,11 @@ footer{
         color:var(--bs-danger) !important;
         transform: translateX(0) scale(1.05) !important;
     }
+
+    .pc-8,.pc-7,.pc-1,.pc-2,.pc-3,.pc-4,.pc-5,.pc-6{
+        background-size:auto;
+        background-position:50% 10%;
+    }
 }
 
 /* Escritorio grande */
@@ -1289,6 +1303,10 @@ footer{
     }
     .btn-glass{
         width:150px;
+    }
+    .pc-8,.pc-7,.pc-1,.pc-2,.pc-3,.pc-4,.pc-5,.pc-6{
+        background-size:auto;
+        background-position:50% 10%;
     }
 }
 
@@ -1889,9 +1907,11 @@ footer{
         width:150px;
         padding:10px;
         font-size: 14px;
-    }
-
-    .pc-1, .pc-2, .pc-3, .pc-4, .pc-5, .pc-6{
+    }    
+    /* .pc-7,.pc-8{
+        background-size:cover;
+    } */
+    .pc-1, .pc-2, .pc-3, .pc-4, .pc-5, .pc-6, .pc-7,.pc-8, .pc-9{
         background-position: center;
     }
 

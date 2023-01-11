@@ -120,7 +120,7 @@ contenedorIcons.forEach(icon => {
     });
 });
 
-/*--------------Prueba generar carousel-item dinamicamente--------------*/
+/*--------------Prueba generar los proyectos dinamicamente--------------*/
 
 modal.forEach(mdl => {
     const modalBody = document.querySelector(".modal-body");
@@ -194,6 +194,27 @@ modal.forEach(mdl => {
         lenguajes: `HTML - CSS - JS - PHP - SQL`,
         proyecto:`http://crudpro-galeano.epizy.com/Polirrubro/index.php`,
         codigo:`https://github.com/GaleanoSantiago/systemCRUD`
+    },
+    {
+        titulo:`Pagina Web ConstruCom`,
+        descripcion:`
+        Pagina web Página web creada para una constructora local, 
+        en conjunto con el equipo de trabajo de <a href="http://n7softwares.github.io/" class="text-primary" target="_blank">N7softwares</a>.
+        `,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://constructoracomercialsrl.com.ar/`,
+        codigo:`https://github.com/GaleanoSantiago/construcom.git`
+    },
+    {
+        titulo:"Catalogo de Productos",
+        descripcion:`
+        Catalogo de productos generado dinamicamente con javascript, con ventanas modal para la información
+        de los productos, y opción de preguntar precio por Whatsapp. El sitio es 100% responsive y los mensajes son 
+        personalizadas para cada producto. 
+        `,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://galeanosantiago.github.io/catalogo-productos/`,
+        codigo:`https://github.com/GaleanoSantiago/catalogo-productos/`
     }
     ]
     mdl.addEventListener("click", ()=>{
