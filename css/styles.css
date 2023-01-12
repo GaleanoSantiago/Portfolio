@@ -419,6 +419,8 @@ a>.btn-cv{
 }
 .info-about-me>p{
     color:var(--bs-light);
+    /* color: var(--bs-gray-500); */
+
     text-align:justify;
 }
 
