@@ -105,7 +105,9 @@
 body{
     font-family: sans-serif;
     max-width: 100% !important;
-    /* overflow-x: hidden !important; */
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;          
+
 }
 
 .total-space{
@@ -905,6 +907,7 @@ svg {
 
 .card-projectX{
 	width:100%;
+    max-width:550px;
     height:300px;
     margin:auto;
     margin-top:40px;

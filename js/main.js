@@ -53,6 +53,7 @@ addEventListener("load",()=>{
 // })
 
 
+
 addEventListener("scroll",()=>{
     
     //scroll para que el menu se fije en el top de la pantalla
@@ -301,6 +302,34 @@ const activarItemsMenu = (tamanoDePantalla)=>{
         itemContact.classList.add("active-item");
     }else{
         itemContact.classList.remove("active-item");
+    }
+}
+
+
+//------------ Para Activar SweetAlert al enviar el correo ------------  
+
+const $form = document.querySelector('#contactform');
+$form.addEventListener('submit', handleSubmit);
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    const form = new FormData(this);
+    const response = await fetch(this.action, {
+    method: this.method,
+    body: form,
+    headers: {
+            'Accept': 'application/json'
+    }
+        });
+        // Si funciona
+    if (response.ok) {
+    this.reset();
+     // Ejecutamos SweetAlert
+     Swal.fire({
+        icon: "success",
+        text: "Email Enviado",
+        timer: 700, // <- Ocultar dentro de 0.7 segundos
+    });
     }
 }
 
