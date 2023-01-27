@@ -608,16 +608,23 @@ a>.btn-cv{
     margin-top:20px;
     width:135px;
 }
-
+#node-logo{
+    margin-top:20px;
+    width:130px;
+}
+#express-logo{
+    margin-top:20px;
+    width:130px;
+}
 
 .section-skills{
-    height:1330px;
+    padding:70px 0;
     background:var(--z4);
 }
 
-.contenedor-skills{
+/* .contenedor-skills{
     padding-top:80px;
-}
+} */
 
 .contenedor-logos{
     margin-top:100px;
@@ -1285,6 +1292,10 @@ footer{
         background-size:auto;
         background-position:50% 10%;
     }
+
+    #node-logo, #express-logo{
+        margin-top:0;
+    }
 }
 
 /* Escritorio grande */
@@ -1295,6 +1306,11 @@ footer{
     .active-item{           /*Para utilizar en js*/
         color:var(--bs-danger) !important;
         transform: translateX(0) scale(1.05) !important;
+    }
+
+
+    #node-logo, #express-logo{
+        margin-top:0;
     }
 
     /*----------------------------Proyectos----------------------------*/
@@ -1345,10 +1361,10 @@ footer{
     }
 
     /*----------------------------Seccion habilidades----------------------------*/
-
+/* 
     .section-skills{
         height:1530px;
-    }
+    } */
 
     .habilidades-2{
     margin-top:40px;
@@ -1492,14 +1508,14 @@ footer{
     /*----------------------------Seccion habilidades----------------------------*/
 
 
-    .section-skills{
+    /* .section-skills{
         height:1570px;
     }
     
     .contenedor-skills{
         padding-top:70px;
     }
-    
+     */
     .contenedor-logos{
         margin-top:50px;
     }
@@ -1768,13 +1784,13 @@ footer{
     /*----------------------------Seccion habilidades----------------------------*/
 
 
-    .section-skills{
+    /* .section-skills{
         height:1300px;
-    }
+    } */
     
-    .contenedor-skills{
+    /* .contenedor-skills{
         padding-top:70px;
-    }
+    } */
     
     .contenedor-logos{
         margin-top:20px;
@@ -1824,7 +1840,16 @@ footer{
         width:115px;
         margin-bottom:-30px;
     }
+    #node-logo{
+        width:110px;
+        margin-bottom:-30px;
 
+    }
+    #express-logo{
+        width:110px;
+        margin-bottom:-30px;
+
+    }
 
     .habilidades-2{
         margin-top:60px;
@@ -2005,9 +2030,9 @@ footer{
 
     /*----------------------------Seccion habilidades----------------------------*/
 
-    .section-skills{
+    /* .section-skills{
         height:1350px;
-    }
+    } */
 
 
     /*----------------------------Seccion proyectos----------------------------*/
@@ -2209,9 +2234,9 @@ footer{
 
     /*----------------------------Seccion habilidades----------------------------*/
 
-    .section-skills{
+    /* .section-skills{
         height:1320px;
-    }
+    } */
 
 
     /*----------------------------Proyectos----------------------------*/
@@ -2286,9 +2311,9 @@ footer{
 
 
     /*----------------------------Seccion habilidades----------------------------*/
-    .section-skills{
+    /* .section-skills{
         height:1355px;
-    }
+    } */
     /*-----------------------------Seccion de Proyectos--------------------------*/
 
     /* .card-projectX{
