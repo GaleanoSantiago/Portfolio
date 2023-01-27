@@ -457,9 +457,9 @@ a>.btn-cv{
     width:300px;
     height:300px;
     border-radius:500px;
-    background:url("../img/prueba3.webp");
-    background-size:110%;
-    background-position:-30% 35%;
+    background:url("../img/perfil.webp");
+    background-size:cover;
+    background-position-y:20%;
     overflow:hidden;
     margin:40px auto;
     animation: flotar 3s ease infinite;
