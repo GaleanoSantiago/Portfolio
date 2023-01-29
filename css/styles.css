@@ -1,4 +1,4 @@
-                            /*--- Estilos creados por Galeano Santiago ---*/
+﻿                            /*--- Estilos creados por Galeano Santiago ---*/
 /*---------------------------- Aspectos Generales ----------------------------*/
 
 *{
@@ -457,7 +457,7 @@ a>.btn-cv{
     width:300px;
     height:300px;
     border-radius:500px;
-    background:url("../img/perfil.webp");
+    background:url("../img/perfil-edit.webp");
     background-size:cover;
     background-position-y:20%;
     overflow:hidden;
