@@ -13,22 +13,10 @@
     --celesteClaro:#769ECB;
     --azulGris:#758f9c;
     --azulMorado:#516091;
-    --funBlue:#175a9e;
-    --shark:#1e1e1f;
-    --white_1:#f6f7f1;
-    --z1:#232741;
-    --z2:#2c2e43;
-    --bg-colorVidrio:rgba(255, 255, 255, .15);
-    --backdrop-filterVidrio:blur(5px);
-    --azulIntenso:#090979;
-    --negroIn:#020024;
-    --rojoOscuro:#C81D11;
-    --rojoBrillante: #FF0800;
-    --celesteBrillante:#00d4ff;
-    --azulFooter:#1b2a4e;
+   
     /*prueba*/
     --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
+    --bs-indigo-: #6610f2;
     --bs-purple: #6f42c1;
     --bs-pink: #d63384;
     --bs-red: #dc3545;
@@ -82,8 +70,18 @@
     --bs-link-hover-color: #0a58ca;
     --bs-code-color: #d63384;
     --bs-highlight-bg: #fff3cd; */
-
-
+    
+    --funBlue:#175a9e;
+    --shark:#1e1e1f;
+    --white_1:#f6f7f1;
+    --bg-colorVidrio:rgba(255, 255, 255, .15);
+    --backdrop-filterVidrio:blur(5px);
+    --azulIntenso:#090979;
+    --negroIn:#020024;
+    --rojoOscuro:#C81D11;
+    --rojoBrillante: #FF0800;
+    --celesteBrillante:#00d4ff;
+    --azulFooter:#1b2a4e;
     --azulNavBar: rgb(17, 0, 255);
     --blackTitulos:#444649;
     --greyPs:#616161;
@@ -92,14 +90,27 @@
     --blackYT2:#202020;
     --blackYT3:#313131;
     --whiteYT:#f9f9f9;
-    --z3:#222733;
     --tittlepurple:#1f2667;
+    /* --z1:#232741; */
+    --z1:#0f172a;
+    --z2:#2c2e43;
+    --z3:#222733;
     --z4:#080d17;
     --dark-github:#0d1117;
     --dark-github-2: #161b22;
     --dark-beauty:#1e242c;
     --dark-beauty-2:#171925;
     --dark-brauty-3:#252934;
+
+    /* Colores nuevos */
+    --bs-indigo: #BE1206;
+    --blur-indigo: rgba(74, 52, 169, 0.6);
+
+    --gameBlue: #0f172a; /*15 23 42*/
+    --gameBlueLight: #1e293b; 
+    --gameLips: #be123c; /*190 18 60*/
+    --gameBlood: #BE1206; /*190 18 6*/
+
 }
 
 body{
@@ -208,22 +219,6 @@ body{
     }
   }
 
-/*  Loader version 2. No es responsive */
-
-/* .loader-triangle-3 polygon{
-	stroke:#ffeb3b;
-	stroke:#fff;
-	stroke-dasharray: 17;
-	animation: anm-tr-3-move 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
-}
-
-@keyframes anm-tr-3-move{
-	to{
-		stroke-dashoffset: -136;
-	}
-} */
-
-
 .loader{
     background:var(--z4);
     width:100%;
@@ -246,20 +241,8 @@ body{
 .loader2{
     /* --Para que desaparezca */
     display:none;
-
-    /*-----En caso de hacer animacion con clip-path-----/*
-    /* clip-path: circle(0% at 100% 0); */
-
-    /* animation:fade-load .8s ease; */
 }
-/* @keyframes fade-load {
-    0%{
-        display:flex;
-    }
-    100%{
-        display:none;
-    }
-} */
+
 /*-------------------------------- Barra de Navegacion ---------------------------*/
 
 #menu{
@@ -622,10 +605,6 @@ a>.btn-cv{
     background:var(--z4);
 }
 
-/* .contenedor-skills{
-    padding-top:80px;
-} */
-
 .contenedor-logos{
     margin-top:100px;
 }
@@ -651,7 +630,7 @@ a>.btn-cv{
 }
 
 .tooltip{
-    background: rgba(74, 52, 169, 0.6);
+    background: rgba(190, 18, 60, 0.6);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.1px);
@@ -695,7 +674,7 @@ a>.btn-cv{
     width:120px;
     border-radius:500px;
     margin:auto;
-    background: rgba(74, 52, 169, 0.6);
+    background: rgba(190, 18, 6, 0.6);
     backdrop-filter: blur(3.1px);
     -webkit-backdrop-filter: blur(3.1px);
     transition: .6s;
@@ -709,7 +688,6 @@ svg {
 
 }
 
-/* @media (hover: hover){ */
 	.contorno-skills-2:hover{
         border:1px solid var(--bs-indigo);
         background:var(--whiteYT);
@@ -721,18 +699,7 @@ svg {
         transition:.4s;
         animation:zoom-pop .6s ease;
     }
-/* } */
-/* .contorno-skills-2:active{
-    border:1px solid var(--bs-indigo);
-    background:var(--whiteYT);
-    transition: .6s;
-}
 
-.contorno-skills-2:active svg{
-    fill:var(--bs-indigo);
-    transition:.4s;
-    animation:zoom-pop .6s ease;
-} */
 
 @keyframes zoom-pop{
     0%{
@@ -762,12 +729,8 @@ svg {
     /* height:800px; */
     padding:80px 0;
 }
-/* 
-.contenedor-projects{
-    padding-top:80px;
-} */
 
-.card-project{
+/* .card-project{
     width:100%;
     height:300px;
     margin:auto;
@@ -780,7 +743,7 @@ svg {
 .card-project>img{
     width:102%;
     transition:.3s;
-    z-index:0;          /*Para que este por debajo del glassmorfismo*/
+    z-index:0;          
     position:relative;
     border-radius:10px;
 
@@ -793,11 +756,10 @@ svg {
     -webkit-backdrop-filter: blur(5px);
     transform:translateY(-360px);
     height:350px;
-    z-index:2;          /*Para que este por encima de la imagen*/
+    z-index:2;          
     position:relative;
-    opacity:0;          /*Para que el glass sea visible o no*/
+    opacity:0;         
     transition:.3s;
-    /* border:1px solid #fff; */
 }
 
 .contenedor-info-glass{
@@ -819,7 +781,7 @@ svg {
 
 .contenedor-info-glass li{
     font-size:15px;
-}
+} */
 
 .contenedor-btn-glass{
     width:200px;
@@ -852,16 +814,6 @@ svg {
 }
 
 @media (hover: hover){
-	/* .card-project:hover img{
-        transform:translateY(20px) scale(1.1);
-        transition:.3s;
-    }
-    
-    .card-project:hover .glass{
-        transition:.3s;
-        opacity:1;
-    } */
-    
     
     .btn-glass:hover{
         background:var(--bs-indigo);
@@ -875,7 +827,7 @@ svg {
 
     }
 }
-.card-project:hover img{
+/* .card-project:hover img{
     transform: scale(1.1);
     transition:.3s;
 }
@@ -883,7 +835,7 @@ svg {
 .card-project:hover .glass{
     transition:.3s;
     opacity:1;
-}
+} */
 
 
 .btn-glass:active{
