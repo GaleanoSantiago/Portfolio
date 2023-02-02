@@ -1,4 +1,4 @@
-﻿                            /*--- Estilos creados por Galeano Santiago ---*/
+                            /*--- Estilos creados por Galeano Santiago ---*/
 /*---------------------------- Aspectos Generales ----------------------------*/
 
 *{
@@ -59,7 +59,7 @@
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
     
-    /* --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     --bs-body-font-family: var(--bs-font-sans-serif);
@@ -81,7 +81,7 @@
     --bs-link-color: #0d6efd;
     --bs-link-hover-color: #0a58ca;
     --bs-code-color: #d63384;
-    --bs-highlight-bg: #fff3cd; */
+    --bs-highlight-bg: #fff3cd;
 
 
     --azulNavBar: rgb(17, 0, 255);
@@ -106,8 +106,6 @@ body{
     font-family: sans-serif;
     max-width: 100% !important;
     overflow-x: hidden !important;
-    scroll-behavior: smooth;          
-
 }
 
 .total-space{
@@ -130,8 +128,8 @@ body{
     color: var(--bs-indigo);
 }
 
-.text-gray{
-    color: var(--bs-gray-500);
+.text-grey{
+    color: var(--bs-gray-700);
 }
 
 .text-darkGrey{
@@ -419,8 +417,6 @@ a>.btn-cv{
 }
 .info-about-me>p{
     color:var(--bs-light);
-    /* color: var(--bs-gray-500); */
-
     text-align:justify;
 }
 
@@ -457,9 +453,9 @@ a>.btn-cv{
     width:300px;
     height:300px;
     border-radius:500px;
-    background:url("../img/perfil-edit.webp");
-    background-size:cover;
-    background-position-y:20%;
+    background:url("../img/prueba3.webp");
+    background-size:110%;
+    background-position:-30% 35%;
     overflow:hidden;
     margin:40px auto;
     animation: flotar 3s ease infinite;
@@ -608,23 +604,16 @@ a>.btn-cv{
     margin-top:20px;
     width:135px;
 }
-#node-logo{
-    margin-top:20px;
-    width:130px;
-}
-#express-logo{
-    margin-top:20px;
-    width:130px;
-}
+
 
 .section-skills{
-    padding:70px 0;
+    height:1330px;
     background:var(--z4);
 }
 
-/* .contenedor-skills{
+.contenedor-skills{
     padding-top:80px;
-} */
+}
 
 .contenedor-logos{
     margin-top:100px;
@@ -682,9 +671,6 @@ a>.btn-cv{
     margin-top:80px;
 }
 
-.habilidades-2 p{
-    color:var(--bs-gray-500);
-}
 
 .contorno-skills-2{
     overflow:hidden;        /*Para que el svg quede por debajo del contorno*/
@@ -759,22 +745,19 @@ svg {
 
 .section-projects{
     background:var(--z1);
-    /* height:800px; */
-    padding:80px 0;
+    height:800px;
 }
-/* 
+
 .contenedor-projects{
     padding-top:80px;
-} */
+}
 
 .card-project{
-    width:100%;
-    height:300px;
+    width:800px;
+    height:470px;
     margin:auto;
     margin-top:40px;
     overflow:hidden;
-    border:1px solid var(--bs-white);
-    border-radius:10px;
 }
 
 .card-project>img{
@@ -782,26 +765,31 @@ svg {
     transition:.3s;
     z-index:0;          /*Para que este por debajo del glassmorfismo*/
     position:relative;
-    border-radius:10px;
 
 
 }
 
 .glass{
+    /* linear-gradient(180deg, rgba(34,39,80,0.3757878151260504) 30%, rgba(102,16,242,0.35) 100%); */
+    /* background: rgba(102, 16, 242, 0.35); */
+    /* background: rgb(34,39,80); */
+    /* background: linear-gradient(180deg, rgba(202, 203, 207, 0) 2%, rgba(0,0,0,0.41) 100%); */
     background: rgba(0, 0, 0, 0.55);
+    /* background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9051995798319328) 75%); */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    transform:translateY(-360px);
-    height:350px;
+    transform:translateY(-470px);
+    height:500px;
     z-index:2;          /*Para que este por encima de la imagen*/
     position:relative;
     opacity:0;          /*Para que el glass sea visible o no*/
     transition:.3s;
-    /* border:1px solid #fff; */
+
 }
 
 .contenedor-info-glass{
-    height: 95%;
+    height:85%;
 }
 
 .contenedor-info-glass h2{
@@ -828,7 +816,6 @@ svg {
 }
 
 .btn-glass{
-    background-color:transparent;
     margin:auto;
     border:1px solid var(--bs-light);
     color:var(--bs-light);
@@ -876,7 +863,7 @@ svg {
     }
 }
 .card-project:hover img{
-    transform: scale(1.1);
+    transform:translateY(20px) scale(1.1);
     transition:.3s;
 }
 
@@ -896,130 +883,8 @@ svg {
     fill:var(--bs-light);
 }
 
-.btn-glass-inverso{
-    background:var(--bs-indigo);
-    color:var(--bs-light);
-}
-.btn-glass-inverso:hover,.btn-glass-inverso:active{
-    background:var(--bs-light);
-    color:var(--bs-indigo);
-    border:1px solid var(--bs-indigo);
-}
-.btn-glass-inverso:hover .svg-git,
-.btn-glass-inverso:active .svg-git{
-    fill:var(--bs-indigo);
-}
-
-.col-projects{
-    border:1px solid var(--bs-secondary);
-}
-
-.card-projectX{
-	width:100%;
-    max-width:550px;
-    height:300px;
-    margin:auto;
-    margin-top:40px;
-    overflow:hidden;
-    border:1px solid var(--bs-white);
-    border-radius:10px;
-    transition:.3s;
-
-}
-.img-project{
-    width:100%;
-    height:100%;
-    transition:.3s;
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    animation:all .3s !important;
-}
-
-.card-projectX:hover .img-project{
-    transform:scale(1.1);
-    transition:all .3s;
-}
-
-.card-projectX:hover .contenedor-info-glassX,
-.card-projectX:focus .contenedor-info-glassX{
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    animation:all .3s !important;
-}
-
-.pc-8{
-    background:url(../img/proyecto6md.webp);
-    background-size:cover;
-    background-position:50% 10%;
-}
-.pc-7{
-    background:url(../img/proyecto5.webp);
-    background-size:cover;
-}
-.pc-1{
-    background:url(../img/proyecto1min.webp);
-    background-size:cover;
-}
-.pc-2{
-    background:url(../img/prota2min.webp);
-    background-size:cover;
-}
-.pc-3{
-    background:url(../img/proyecto2min.webp);
-    background-size:cover;
-}
-.pc-4{
-    background:url(../img/proyecto_ru1min.webp);
-    background-size:cover;
-}
-.pc-5{
-    background:url(../img/proyecto3min.webp);
-    background-size:cover;
-}
-.pc-6{
-    background:url(../img/proyecto4min.webp);
-    background-size:cover;
-}
 
 
-.contenedor-info-glassX{
-    width:100%;
-    height:100%;
-    opacity:0;
-    transition:all .3s;
-    position:relative;
-    /* z-index:2; */
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-}
-.card-projectX:hover .contenedor-info-glassX,
-.card-projectX:focus .contenedor-info-glassX{
-    opacity:1;
-    transition:all .3s;
-}
-
-/* -------------------------------- Modal -------------------------------------- */
-/* .modal{
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-} */
-.modal-content{
-    background-color:var(--z4);
-    border:1px solid var(--bs-secondary);
-}
-.modal-header{
-    border-bottom:1px solid var(--bs-secondary);
-}
-.modal-footer{
-    border:1px solid var(--bs-secondary);
-}
-.modal-body,.modal-title{
-    color:var(--bs-light);
-}
 /*--------------------------------- Contacto ---------------------------------*/
 
 .section-contact{
@@ -1287,15 +1152,6 @@ footer{
         color:var(--bs-danger) !important;
         transform: translateX(0) scale(1.05) !important;
     }
-
-    .pc-8,.pc-7,.pc-1,.pc-2,.pc-3,.pc-4,.pc-5,.pc-6{
-        background-size:auto;
-        background-position:50% 10%;
-    }
-
-    #node-logo, #express-logo{
-        margin-top:0;
-    }
 }
 
 /* Escritorio grande */
@@ -1307,28 +1163,7 @@ footer{
         color:var(--bs-danger) !important;
         transform: translateX(0) scale(1.05) !important;
     }
-
-
-    #node-logo, #express-logo{
-        margin-top:0;
-    }
-
-    /*----------------------------Proyectos----------------------------*/
     
-    .card-projectX{
-        height:250px;
-    }
-
-    .contenedor-btn-glass{
-        width:150px;
-    }
-    .btn-glass{
-        width:150px;
-    }
-    .pc-8,.pc-7,.pc-1,.pc-2,.pc-3,.pc-4,.pc-5,.pc-6{
-        background-size:auto;
-        background-position:50% 10%;
-    }
 }
 
 /* Escritorio pequeño / tablet */
@@ -1361,10 +1196,10 @@ footer{
     }
 
     /*----------------------------Seccion habilidades----------------------------*/
-/* 
+
     .section-skills{
         height:1530px;
-    } */
+    }
 
     .habilidades-2{
     margin-top:40px;
@@ -1372,63 +1207,9 @@ footer{
    
     /*----------------------------Seccion proyectos----------------------------*/
 
-    /* .section-projects{
+    .section-projects{
         height:750px;
-    } */
-
-    .card-project{
-        width:100%;
-        height:190px;
-        /* overflow:visible; */
     }
-    
-    .card-projectX{
-        height:190px;
-    }
-
-    .glass{
-       
-        transform:translateY(-200px);
-        height:200px;
-        z-index:2;          /*Para que este por encima de la imagen*/
-        position:relative;
-        opacity:0;          /*Para que el glass sea visible o no*/
-        transition:.3s;
-        /* border:1px solid #fff; */
-    }
-    
-    .contenedor-info-glass{
-        height: 95%;
-    }
-    /* .contenedor-info-glass{
-        height:80%;
-    } */
-
-    .contenedor-info-glass p{
-        font-size:11px;
-        text-align:left;
-
-    }
-    .contenedor-info-glass h2{
-        font-size:16px;
-    }
-
-
-    .contenedor-btn-glass{
-        width:130px;
-        margin:auto;
-        margin-top:7px;
-        border-radius: 500px;
-    }
-    
-    .btn-glass{
-       
-        width:130px;
-        padding-top:4px;
-        padding-bottom:4px;
-        font-size: 14px;
-    }
-
 
     /*----------------------------Seccion contactos----------------------------*/
 
@@ -1508,14 +1289,14 @@ footer{
     /*----------------------------Seccion habilidades----------------------------*/
 
 
-    /* .section-skills{
+    .section-skills{
         height:1570px;
     }
     
     .contenedor-skills{
         padding-top:70px;
     }
-     */
+    
     .contenedor-logos{
         margin-top:50px;
     }
@@ -1539,28 +1320,28 @@ footer{
     
     /*----------------------------Seccion proyectos----------------------------*/
 
-    /* .section-projects{
+    .section-projects{
         height:570px;
-    } */
-/* 
+    }
+
     .contenedor-projects{
         padding-top:70px;
-    } */
+    }
 
     /* project-cards */
 
     .card-project{
-        width:100%;
-        height:290px;
-        /* overflow:visible; */
+        width:500px;
+        height:280px;
+   
     }
     
     
     .glass{
         width:100%;
         
-        transform:translateY(-300px);
-        height:320px;
+        transform:translateY(-290px);
+        height:300px;
     
     }
 
@@ -1578,7 +1359,7 @@ footer{
     }
 
     .contenedor-info-glass p{
-        font-size:15px;
+        font-size:13px;
         text-align:left;
 
     }
@@ -1591,8 +1372,6 @@ footer{
     .contenedor-btn-glass{
         width:150px;
         margin:auto;
-        margin-top:7px;
-
         border-radius: 500px;
     }
     
@@ -1691,7 +1470,7 @@ footer{
     }
 
     p, li{
-        font-size:13px;
+        font-size:12px;
     }
     
 
@@ -1784,13 +1563,13 @@ footer{
     /*----------------------------Seccion habilidades----------------------------*/
 
 
-    /* .section-skills{
+    .section-skills{
         height:1300px;
-    } */
+    }
     
-    /* .contenedor-skills{
+    .contenedor-skills{
         padding-top:70px;
-    } */
+    }
     
     .contenedor-logos{
         margin-top:20px;
@@ -1840,16 +1619,7 @@ footer{
         width:115px;
         margin-bottom:-30px;
     }
-    #node-logo{
-        width:110px;
-        margin-bottom:-30px;
 
-    }
-    #express-logo{
-        width:110px;
-        margin-bottom:-30px;
-
-    }
 
     .habilidades-2{
         margin-top:60px;
@@ -1874,75 +1644,60 @@ footer{
 
     /*----------------------------Seccion proyectos----------------------------*/
     
-    /* .section-projects{
-        height:auto;
-        padding-bottom:80px;
-    } */
-/* 
+    .section-projects{
+        height:570px;
+    }
+
     .contenedor-projects{
         padding-top:70px;
-    } */
+    }
 
     /* project-cards */
 
     .card-project{
-        width:100%;
-        height:300px;
-        /* overflow:visible; */
+        width:500px;
+        height:280px;
+   
     }
     
-
+    .card-project:hover img{
+        transform:translateY(10px) scale(1.1);
+ 
+    }
     .glass{
         width:100%;
         
-        transform:translateY(-340px);
-        height:400px;
+        transform:translateY(-290px);
+        height:300px;
     
     }
-
-    .card-project:hover img{
-        transform:translateY(10px) scale(1.1);
-
-        }
     
     .contenedor-info-glass{
-        height:85%;
-    }
-
-    .contenedor-info-glass h2{
-        font-size:22px;
+        height:80%;
     }
 
     .contenedor-info-glass p{
-        font-size:15px;
+        font-size:11px;
         text-align:left;
 
     }
-    .contenedor-info-glass li{
-        font-size:11px;
-        text-align:left;
+    .contenedor-info-glass h2{
+        font-size:16px;
     }
-    
+
 
     .contenedor-btn-glass{
         width:150px;
         margin:auto;
-        margin-top:7px;
-
         border-radius: 500px;
     }
     
     .btn-glass{
        
         width:150px;
-        padding:10px;
+        padding-top:5px;
+        padding-bottom:5px;
         font-size: 14px;
-    }    
-    /* .pc-7,.pc-8{
-        background-size:cover;
-    } */
-    .pc-1, .pc-2, .pc-3, .pc-4, .pc-5, .pc-6, .pc-7,.pc-8, .pc-9{
-        background-position: center;
     }
 
     /*----------------------------Seccion contactos----------------------------*/
@@ -2030,25 +1785,25 @@ footer{
 
     /*----------------------------Seccion habilidades----------------------------*/
 
-    /* .section-skills{
+    .section-skills{
         height:1350px;
-    } */
+    }
 
 
     /*----------------------------Seccion proyectos----------------------------*/
     
-    /* .section-projects{
+    .section-projects{
         height:540px;
-    } */
-/* 
+    }
+
     .contenedor-projects{
         padding-top:70px;
-    } */
+    }
 
     /* project-cards */
 
-    .card-projectX{
-        width:100%;
+    .card-project{
+        width:400px;
         height:240px;
    
     }
@@ -2072,7 +1827,7 @@ footer{
     }
 
     .contenedor-info-glass p{
-        font-size:13px;
+        font-size:11px;
         text-align:left;
 
     }
@@ -2082,16 +1837,16 @@ footer{
     
 
     .contenedor-btn-glass{
-        width:140px;
+        width:100px;
 
     }
     
     .btn-glass{
         
-        width:140px;
-        padding:9px;
+        width:100px;
+        padding:4px 3px;
         
-        /* font-size: 1px; */
+        font-size: 12px;
     }
 
     /* .btn-glass>.svg-git{
@@ -2100,21 +1855,6 @@ footer{
     } */
 }
 
-/*especial para proyectos*/
-/* @media only screen and (max-width:425px){
-    .card-projectX{
-        height:230px;
-   
-    }
-    .pc-1, .pc-2, .pc-3, .pc-4, .pc-5, .pc-6{
-        background-position: center;
-    }
-} */
-@media only screen and (max-width:375px){
-    .card-projectX{
-        height:200px;
-    }
-}
 /*Celulares angostos*/
 @media only screen and (max-width:365px){
     p, li{
@@ -2234,16 +1974,16 @@ footer{
 
     /*----------------------------Seccion habilidades----------------------------*/
 
-    /* .section-skills{
+    .section-skills{
         height:1320px;
-    } */
+    }
 
 
     /*----------------------------Proyectos----------------------------*/
 
-    .card-projectX{
-        /* width:350px; */
-        height:200px;
+    .card-project{
+        width:350px;
+        height:240px;
    
     }
     .glass{
@@ -2311,15 +2051,37 @@ footer{
 
 
     /*----------------------------Seccion habilidades----------------------------*/
-    /* .section-skills{
+    .section-skills{
         height:1355px;
+    }
+
+    /* imagenes de lenguajes */
+    /* #html-logo{
+        width:90px;
+    }
+    #css-logo{
+        width:115px;
+    }
+    #js-logo{
+        width:90px;
+    }
+    #git-logo{
+        width:105px;
+    }
+    #php-logo{
+        width:100px;
+    }
+    #sql-logo{
+        width:100px;
     } */
+
     /*-----------------------------Seccion de Proyectos--------------------------*/
 
-    /* .card-projectX{
-        height:200px;
+    .card-project{
+        width:100%;
+        height:240px;
    
-    } */
+    }
     .glass{
         width:100%;
         
@@ -2333,17 +2095,17 @@ footer{
         height:90%;
     }
 
-    /* .contenedor-btn-glass{
-        width:140px;
+    .contenedor-btn-glass{
+        width:100px;
     }
     
     .btn-glass{
         
-        width:140px;
-        padding:4px;
+        width:100px;
+        padding:4px 0;
         
         font-size: 11px;
-    } */
+    }
 
     .btn-glass>.svg-git{
         width:13%;
