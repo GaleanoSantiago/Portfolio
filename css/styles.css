@@ -730,59 +730,6 @@ svg {
     padding:80px 0;
 }
 
-/* .card-project{
-    width:100%;
-    height:300px;
-    margin:auto;
-    margin-top:40px;
-    overflow:hidden;
-    border:1px solid var(--bs-white);
-    border-radius:10px;
-}
-
-.card-project>img{
-    width:102%;
-    transition:.3s;
-    z-index:0;          
-    position:relative;
-    border-radius:10px;
-
-
-}
-
-.glass{
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    transform:translateY(-360px);
-    height:350px;
-    z-index:2;          
-    position:relative;
-    opacity:0;         
-    transition:.3s;
-}
-
-.contenedor-info-glass{
-    height: 95%;
-}
-
-.contenedor-info-glass h2{
-	border-bottom:1px solid var(--bs-light);
-	color:var(--bs-light);
-	font-weight:bolder;
-}
-.lenguajes-utilizados{
-    border-left:1px solid var(--bs-light);
-}
-
-.contenedor-info-glass ul{
-    list-style-type: circle;
-}
-
-.contenedor-info-glass li{
-    font-size:15px;
-} */
-
 .contenedor-btn-glass{
     width:200px;
     margin:auto;
@@ -827,16 +774,6 @@ svg {
 
     }
 }
-/* .card-project:hover img{
-    transform: scale(1.1);
-    transition:.3s;
-}
-
-.card-project:hover .glass{
-    transition:.3s;
-    opacity:1;
-} */
-
 
 .btn-glass:active{
     background:var(--bs-indigo);
@@ -901,6 +838,14 @@ svg {
     animation:all .3s !important;
 }
 
+.pc-10{
+    background-size:cover;
+}
+.pc-9{
+    background:url(../img/proy-node-1.webp);
+    background-size:cover;
+
+}
 .pc-8{
     background:url(../img/proyecto6md.webp);
     background-size:cover;
@@ -1240,7 +1185,7 @@ footer{
         transform: translateX(0) scale(1.05) !important;
     }
 
-    .pc-8,.pc-7,.pc-1,.pc-2,.pc-3,.pc-4,.pc-5,.pc-6{
+    .pc-9,.pc-8,.pc-7,.pc-1,.pc-2,.pc-3,.pc-4,.pc-5,.pc-6{
         background-size:auto;
         background-position:50% 10%;
     }
@@ -1277,7 +1222,7 @@ footer{
     .btn-glass{
         width:150px;
     }
-    .pc-8,.pc-7,.pc-1,.pc-2,.pc-3,.pc-4,.pc-5,.pc-6{
+    .pc-9,.pc-8,.pc-7,.pc-1,.pc-2,.pc-3,.pc-4,.pc-5,.pc-6{
         background-size:auto;
         background-position:50% 10%;
     }
@@ -1336,6 +1281,7 @@ footer{
     
     .card-projectX{
         height:190px;
+        max-width:334px;
     }
 
     .glass{
