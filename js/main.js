@@ -211,7 +211,7 @@ modal.forEach(mdl => {
         codigo:`https://github.com/GaleanoSantiago/catalogo-productos/`
     },
     {
-        titulo:"App de Tareas con NodeJS y Express",
+        titulo:"Web App de Tareas con NodeJS y Express",
         descripcion:`
         CRUD de tareas desarrollado con NodeJs y Express.
         `,
