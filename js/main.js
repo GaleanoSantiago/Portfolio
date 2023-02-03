@@ -213,9 +213,9 @@ modal.forEach(mdl => {
     {
         titulo:"Web App de Tareas con NodeJS y Express",
         descripcion:`
-        CRUD de tareas desarrollado con NodeJs y Express.
-        `,
-        lenguajes: `HTML - CSS - JS - Node JS - Express JS`,
+        CRUD de tareas desarrollado con NodeJs y Express. Utilizando SQL para 
+        la conexión con la bd y handlebars para las vistas.`,
+        lenguajes: `HTML - CSS - JS - Node JS - Express JS - SQL`,
         proyecto:`#proyectos`,
         codigo:`#proyectos`
     }
