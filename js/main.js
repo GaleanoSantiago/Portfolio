@@ -216,7 +216,7 @@ modal.forEach(mdl => {
         CRUD de tareas desarrollado con NodeJs y Express. Utilizando SQL para 
         la conexión con la bd y handlebars para las vistas.`,
         lenguajes: `HTML - CSS - JS - Node JS - Express JS - SQL`,
-        proyecto:`#proyectos`,
+        proyecto:`https://nodejs-crud-tasks-production.up.railway.app/`,
         codigo:`https://github.com/GaleanoSantiago/nodejs-crud-tasks`
     }
     ]
@@ -235,7 +235,7 @@ modal.forEach(mdl => {
         `;
         let proyecto;
         let target;
-        if(valueMdl==1 || valueMdl==8 ){
+        if(valueMdl==1){
             proyecto = "#proyectos";
             target = "";
         }else{
