@@ -599,6 +599,9 @@ a>.btn-cv{
     margin-top:20px;
     width:130px;
 }
+#mongodb-logo{
+    width:130px;
+}
 
 .section-skills{
     padding:70px 0;
@@ -1266,7 +1269,10 @@ footer{
     .habilidades-2{
     margin-top:40px;
     }
-   
+
+    #mongodb-logo{
+        margin-top:20px;
+    }
     /*----------------------------Seccion proyectos----------------------------*/
 
     /* .section-projects{
@@ -1748,7 +1754,10 @@ footer{
         margin-bottom:-30px;
 
     }
-
+    #mongodb-logo{
+        width:110px;
+        margin-bottom:-30px;
+    }
     .habilidades-2{
         margin-top:60px;
     }
