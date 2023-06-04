@@ -13,7 +13,7 @@ const modal = document.querySelectorAll(".mdl");
 
 /*---------------Footer---------------*/
 const contenedorIcons = document.querySelectorAll(".icon-container");
- 
+
 
 
 /*---------------Pantalla Preloader---------------*/
@@ -23,29 +23,6 @@ addEventListener("load",()=>{
    document.getElementById("loader").classList.toggle("loader2");
    document.querySelector(".btn-cv").classList.add("btn-animation");
 })
-
-
-   //Para saber la resolucion de pantalla
-// console.log("La altura de tu pantalla es de " + screen.height);
-// console.log("La ancho de tu pantalla es de " + screen.width); 
-
-//          Prueba fallida para automatizar el proceso de seleccion de items del navbar
-// itemsMenu.forEach((item)=>{
-
-//     console.log(item.id);
-//     addEventListener("scroll",()=>{
-//         let tamanoDePantalla=window.innerHeight;
-
-//         let itemMenu = document.getElementById(item.id);
-//         let posicionItem=itemMenu.getBoundingClientRect().top;
-
-//         if(posicionItem<(tamanoDePantalla/3.2)){
-//                 itemAbout.classList.add("text-danger");
-//             }
-//     })
-// })
-
-
 
 addEventListener("scroll",()=>{
     
