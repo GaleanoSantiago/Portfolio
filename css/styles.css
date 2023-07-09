@@ -600,9 +600,17 @@ a>.btn-cv{
     width:130px;
 }
 #mongodb-logo{
+    margin-top:20px;
     width:130px;
 }
-
+#python-logo{
+    margin-top:20px;
+    width:130px;
+}
+#flask-logo{
+    margin-top:20px;
+    width:130px;
+}
 .section-skills{
     padding:70px 0;
     background:var(--z4);
@@ -1755,6 +1763,14 @@ footer{
 
     }
     #mongodb-logo{
+        width:110px;
+        margin-bottom:-30px;
+    }
+    #python-logo{
+        width:110px;
+        margin-bottom:-30px;
+    }
+    #flask-logo{
         width:110px;
         margin-bottom:-30px;
     }

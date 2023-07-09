@@ -253,34 +253,20 @@ const activarItemsMenu = (tamanoDePantalla)=>{
     let posicionProjects=proyectos.getBoundingClientRect().top;
     let posicionContact=contacto.getBoundingClientRect().top;
 
+    let secciones = [posicionInicio, posicionAbout, posicionSkills, posicionProjects, posicionContact]
 
-
-    if(posicionInicio<(tamanoDePantalla/3) && posicionAbout>(tamanoDePantalla/3.2)){
-        itemInicio.classList.add("active-item");
-    }else{
-        itemInicio.classList.remove("active-item");
-
-    }
-    if(posicionAbout<(tamanoDePantalla/3.2) && posicionSkills>(tamanoDePantalla/5)){
-        itemAbout.classList.add("active-item");
-    }else{
-        itemAbout.classList.remove("active-item");
-        
-    }
-    if(posicionSkills<(tamanoDePantalla/5) && posicionProjects>(tamanoDePantalla/5)){
-        itemSkills.classList.add("active-item");
-    }else{
-        itemSkills.classList.remove("active-item");
-    }
-    if(posicionProjects<(tamanoDePantalla/5) && posicionContact>(tamanoDePantalla/5)){
-        itemProjs.classList.add("active-item");
-    }else{
-        itemProjs.classList.remove("active-item");
-    }
-    if(posicionContact<(tamanoDePantalla/5)){
-        itemContact.classList.add("active-item");
-    }else{
-        itemContact.classList.remove("active-item");
+    
+    for(let i=0; i<secciones.length; i++){
+        if(secciones[i]<(tamanoDePantalla/4) && secciones[i+1]>(tamanoDePantalla/4)){
+            itemsMenu[i].classList.add("active-item");
+        }else{
+            itemsMenu[i].classList.remove("active-item");
+        }
+        if(secciones[secciones.length - 1]<(tamanoDePantalla/4)){
+            itemsMenu[itemsMenu.length - 1].classList.add("active-item");
+        }else{
+            itemsMenu[itemsMenu.length - 1].classList.remove("active-item");
+        }
     }
 }
 
