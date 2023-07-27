@@ -556,11 +556,53 @@ a>.btn-cv{
 }
 
 
-    /*      ------------      Efecto imagen 3d parallas tilt.js      ------------      */
+/*--------------------------------- Educacion ---------------------------------*/
+/* .educacion {
+    padding:30px 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
-
-
+.timeline {
+    width: 4px;
+    background-color: #BE1206;
+    position: relative;
+  }
+  
+  .line {
+    width: 5px;
+    height: 100%;
+    background-color: #BE1206;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .point {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #BE1206;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .point:nth-child(1) {
+    top: 20%;
+  }
+  
+  .point:nth-child(2) {
+    top: 50%;
+  }
+  
+  .point:nth-child(3) {
+    top: 80%;
+  } */
 
 /*--------------------------------- Habilidades ---------------------------------*/
 
@@ -850,6 +892,7 @@ svg {
 }
 
 .pc-10{
+    background:url(../img/proyectoCatalogo2.webp);
     background-size:cover;
 }
 .pc-9{
@@ -1864,7 +1907,7 @@ footer{
     /* .pc-7,.pc-8{
         background-size:cover;
     } */
-    .pc-1, .pc-2, .pc-3, .pc-4, .pc-5, .pc-6, .pc-7,.pc-8, .pc-9{
+    .pc-1, .pc-2, .pc-3, .pc-4, .pc-5, .pc-6, .pc-7,.pc-8, .pc-9, .pc-10, .pc-11{
         background-position: center;
     }
 

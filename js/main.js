@@ -195,6 +195,16 @@ modal.forEach(mdl => {
         lenguajes: `HTML - CSS - JS - Node JS - Express JS - SQL`,
         proyecto:`https://nodejs-crud-tasks-production.up.railway.app/`,
         codigo:`https://github.com/GaleanoSantiago/nodejs-crud-tasks`
+    },
+    {
+        titulo:"Catalogo Web de Productos",
+        descripcion:`
+        Catalogo web para empresa Famago, funciona con un crud en PHP y SQL. Utiliza una
+        API en JS para mostrar los productos dinamicamente en la pagina principal.
+        El codigo Backend se encuentra privado.`,
+        lenguajes: `HTML - CSS - JS - SQL - PHP`,
+        proyecto:`https://galeanosantiago.github.io/famago-demo/`,
+        codigo:`https://github.com/GaleanoSantiago/famago-demo`
     }
     ]
     mdl.addEventListener("click", ()=>{
@@ -212,6 +222,7 @@ modal.forEach(mdl => {
         `;
         let proyecto;
         let target;
+        // Para el proyecto del portafolio
         if(valueMdl==1){
             proyecto = "#proyectos";
             target = "";
