@@ -6,7 +6,10 @@ const itemSkills = document.getElementById("itemSkills");
 const itemProjs = document.getElementById("itemProjects");
 const itemContact = document.getElementById("itemContacto");
 const itemsMenu = document.querySelectorAll(".nav-link");
-
+/*---------------Timeline---------------*/
+const timeline = document.getElementById("timeline");
+const timelineContainer = document.querySelectorAll(".timeline-container");
+// timeline.classList.add("animate");
 /*---------------Modal---------------*/
 const modal = document.querySelectorAll(".mdl");
 // console.log(modal);
@@ -20,8 +23,8 @@ const contenedorIcons = document.querySelectorAll(".icon-container");
 
 //  Load. No se pone el window
 addEventListener("load",()=>{
-   document.getElementById("loader").classList.toggle("loader2");
-   document.querySelector(".btn-cv").classList.add("btn-animation");
+    document.getElementById("loader").classList.toggle("loader2");
+    document.querySelector(".btn-cv").classList.add("btn-animation");
 })
 
 addEventListener("scroll",()=>{
@@ -43,10 +46,12 @@ addEventListener("scroll",()=>{
     let subrayado2=document.getElementById("subrayado-2");
     let subrayado3 = document.getElementById("subrayado-3");
     let subrayado4 =document.getElementById("subrayado-4");
+    let subrayado5 =document.getElementById("subrayado-5");
     let posicionObjt1 = subrayado.getBoundingClientRect().top;
     let posicionObjt2 = subrayado2.getBoundingClientRect().top;
     let posicionObjt3 = subrayado3.getBoundingClientRect().top;
     let posicionObjt4 = subrayado4.getBoundingClientRect().top;
+    let posicionObjt5 = subrayado5.getBoundingClientRect().top;
     // console.log(posicionObjt3);
     let tamanoDePantalla=window.innerHeight;
     // console.log("Tamaño de pantalla", (tamanoDePantalla - 100));
@@ -63,11 +68,25 @@ addEventListener("scroll",()=>{
     if(posicionObjt4 < tamanoDePantalla){
         subrayado4.style.animation = "fade-sub 2s ease";
     }
+    if(posicionObjt5 < tamanoDePantalla){
+        subrayado5.style.animation = "fade-sub 2s ease";
+    }
     
     activarItemsMenu(tamanoDePantalla);
-
+    // Animacion del timeline
+    activarAnimacion(tamanoDePantalla);
 })
-
+// Animacion del timeline
+const activarAnimacion = (tamanoDePantalla)=>{
+    let posicionTimeline = timeline.getBoundingClientRect().top;
+    // console.log(posicionTimeline);
+    if(posicionTimeline < tamanoDePantalla-200){
+        timeline.classList.add("animate");
+        timelineContainer.forEach(box => {
+            box.classList.add("animate");
+        })
+    }
+}
 
 contenedorIcons.forEach(icon => {
     icon.addEventListener('mouseover', () => {
@@ -248,6 +267,8 @@ modal.forEach(mdl => {
 
     });
 });
+
+/*-------------- Para activar los iconos del menu --------------*/
 
 const activarItemsMenu = (tamanoDePantalla)=>{
     const inicio = document.getElementById("inicio");
