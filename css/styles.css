@@ -160,17 +160,19 @@ body{
     background: rgb(255,0,0);
     background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(2,0,36,0) 100%);
     /* animation: fade-sub 1s ease; */
-        /* background: var(--bs-danger); */
     margin:auto;
+    opacity:0;
 }
 
 /* No se utiliza todavia 29/08/22 
 - Actualizacion: Ya se utiliza satisfactoriamente 10/09 22*/
 @keyframes fade-sub{
     0%{
+        opacity:1;
         width:0;
     }
     100%{
+        opacity:1;
         width:100%;
     }
 }
@@ -382,13 +384,13 @@ a>.btn-cv{
     width: 100%;
 
     background:var(--z1);
-    height:700px;
-    /* padding:40px 0; */
+    /* height:700px; */
+    padding:40px 0 ;
 }
 
-.contenedor-about-me{
+/* .contenedor-about-me{
     padding-top:40px;
-}
+} */
 
 .contenedor-about-me .row{
     padding-top:40px;
@@ -559,7 +561,7 @@ a>.btn-cv{
 
 /*--------------------------------- Educacion ---------------------------------*/
 .educacion{
-    padding:10px 0;
+    padding:45px 0;
     background:var(--z1);
 }
 
@@ -601,7 +603,9 @@ a>.btn-cv{
 .timeline-container.animate:nth-child(3){
     animation-delay:2.5s;
 }
-
+.timeline-container.animate:nth-child(4){
+    animation-delay:3.6s;
+}
 .text-box{
     padding:15px 15px;
     /* border-radius:5px; */
@@ -655,7 +659,7 @@ a>.btn-cv{
 
 .timeline.animate::after {
     opacity:1;
-    animation: moveline 3.5s linear forwards;
+    animation: moveline 4.6s linear forwards;
 }
 
 @keyframes moveline{
@@ -1084,6 +1088,13 @@ svg {
 
 }
 
+#copyButton{
+    /* border-radius:5px; */
+    border:none;
+    padding:0;
+    background:transparent;
+}
+
 .form-contact{
     width:500px;
 }
@@ -1382,16 +1393,16 @@ footer{
     }
     
     
-    .section-about-me{
+    /* .section-about-me{
         height:755px;
-    }
+    } */
     .section-about-me>.container{
         min-width:95% !important;
     }
 
-    .contenedor-about-me{
+    /* .contenedor-about-me{
         padding-top:40px;
-    }
+    } */
     
     .contenedor-about-me .row{
         padding-top:20px;
@@ -1497,12 +1508,12 @@ footer{
     }
 
 /*----------------------------Sobre mi----------------------------*/
-    .section-about-me{
+    /* .section-about-me{
         height:940px;
-    }
-    .contenedor-about-me{
+    } */
+    /* .contenedor-about-me{
         padding-top:30px;
-    }
+    } */
     .contenedor-about-me .row{
         padding-top:0;
     }
@@ -1765,12 +1776,12 @@ footer{
 
 
 /*----------------------------Sobre mi----------------------------*/
-    .section-about-me{
+    /* .section-about-me{
         height:940px;
-    }
-    .contenedor-about-me{
+    } */
+    /* .contenedor-about-me{
         padding-top:40px;
-    }
+    } */
     .contenedor-about-me .row{
         padding-top:0;
     }
@@ -2111,7 +2122,7 @@ footer{
         left:0 !important;
     }
     .left-container .time-point, .right-container .time-point{
-        left:20px;
+        left:21px;
     }
 
     .left-container-arrow, .right-container-arrow{
@@ -2176,16 +2187,6 @@ footer{
     } */
 }
 
-/*especial para proyectos*/
-/* @media only screen and (max-width:425px){
-    .card-projectX{
-        height:230px;
-   
-    }
-    .pc-1, .pc-2, .pc-3, .pc-4, .pc-5, .pc-6{
-        background-position: center;
-    }
-} */
 @media only screen and (max-width:375px){
     .card-projectX{
         height:200px;
@@ -2238,12 +2239,12 @@ footer{
 
     /*----------------------------Seccion sobre mi----------------------------*/
     
-    .section-about-me{
+    /* .section-about-me{
         height:920px;
-    }
-    .contenedor-about-me{
+    } */
+    /* .contenedor-about-me{
         padding-top:40px;
-    }
+    } */
     .contenedor-about-me .row{
         padding-top:0;
     }

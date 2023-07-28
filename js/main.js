@@ -27,6 +27,17 @@ addEventListener("load",()=>{
     document.querySelector(".btn-cv").classList.add("btn-animation");
 })
 
+// ------ Version de prueba para automatizar la animacion de subrayado de los titulos ------
+
+// const subrayados = document.querySelectorAll(".subrayado");
+// // console.log(subrayados);
+// let subsBounding = [];
+// subrayados.forEach(subs =>{
+//     // console.log(subs);
+//     subsBounding.push(subs);
+// })
+// console.log(subsBounding);
+
 addEventListener("scroll",()=>{
     
     //scroll para que el menu se fije en el top de la pantalla
@@ -47,35 +58,31 @@ addEventListener("scroll",()=>{
     let subrayado3 = document.getElementById("subrayado-3");
     let subrayado4 =document.getElementById("subrayado-4");
     let subrayado5 =document.getElementById("subrayado-5");
+
+    let subsArray = [subrayado, subrayado2, subrayado3, subrayado4, subrayado5]
+
     let posicionObjt1 = subrayado.getBoundingClientRect().top;
     let posicionObjt2 = subrayado2.getBoundingClientRect().top;
     let posicionObjt3 = subrayado3.getBoundingClientRect().top;
     let posicionObjt4 = subrayado4.getBoundingClientRect().top;
     let posicionObjt5 = subrayado5.getBoundingClientRect().top;
-    // console.log(posicionObjt3);
+    
     let tamanoDePantalla=window.innerHeight;
-    // console.log("Tamaño de pantalla", (tamanoDePantalla - 100));
 
-    if(posicionObjt1 < tamanoDePantalla){
-        subrayado.style.animation = "fade-sub 2s ease";
-    }
-    if(posicionObjt2 < tamanoDePantalla){
-        subrayado2.style.animation = "fade-sub 2s ease";
-    }
-    if(posicionObjt3 < tamanoDePantalla){
-        subrayado3.style.animation = "fade-sub 2s ease";
-    }
-    if(posicionObjt4 < tamanoDePantalla){
-        subrayado4.style.animation = "fade-sub 2s ease";
-    }
-    if(posicionObjt5 < tamanoDePantalla){
-        subrayado5.style.animation = "fade-sub 2s ease";
+    let subPosiArray = [posicionObjt1, posicionObjt2, posicionObjt3, posicionObjt4, posicionObjt5]
+
+    for(let i=0; i<subPosiArray.length; i++){
+        if(subPosiArray[i] < (tamanoDePantalla-200)){
+            subsArray[i].style.animation = "fade-sub 2s ease";
+            subsArray[i].style.opacity=1;
+        }
     }
     
     activarItemsMenu(tamanoDePantalla);
     // Animacion del timeline
     activarAnimacion(tamanoDePantalla);
 })
+
 // Animacion del timeline
 const activarAnimacion = (tamanoDePantalla)=>{
     let posicionTimeline = timeline.getBoundingClientRect().top;
@@ -273,6 +280,7 @@ modal.forEach(mdl => {
 const activarItemsMenu = (tamanoDePantalla)=>{
     const inicio = document.getElementById("inicio");
     const sobreMi = document.getElementById("sobre-mi");
+    const educ = document.getElementById("educacion");
     const habilidades = document.getElementById("habilidades");
     const proyectos = document.getElementById("proyectos");
     const contacto = document.getElementById("contacto");
@@ -281,26 +289,56 @@ const activarItemsMenu = (tamanoDePantalla)=>{
 
     let posicionInicio=inicio.getBoundingClientRect().top;
     let posicionAbout=sobreMi.getBoundingClientRect().top;
+    let posicionEduc = educ.getBoundingClientRect().top;
     let posicionSkills=habilidades.getBoundingClientRect().top;
     let posicionProjects=proyectos.getBoundingClientRect().top;
     let posicionContact=contacto.getBoundingClientRect().top;
 
-    let secciones = [posicionInicio, posicionAbout, posicionSkills, posicionProjects, posicionContact]
+    let secciones = [posicionInicio, posicionAbout, posicionEduc, posicionSkills, posicionProjects, posicionContact]
 
     
     for(let i=0; i<secciones.length; i++){
-        if(secciones[i]<(tamanoDePantalla/4) && secciones[i+1]>(tamanoDePantalla/4)){
+        if(secciones[i]<(tamanoDePantalla-300) && secciones[i+1]>(tamanoDePantalla-300)){
             itemsMenu[i].classList.add("active-item");
         }else{
             itemsMenu[i].classList.remove("active-item");
         }
-        if(secciones[secciones.length - 1]<(tamanoDePantalla/4)){
+        if(secciones[secciones.length - 1]<(tamanoDePantalla-300)){
             itemsMenu[itemsMenu.length - 1].classList.add("active-item");
         }else{
             itemsMenu[itemsMenu.length - 1].classList.remove("active-item");
         }
     }
 }
+
+const copyButton = document.getElementById("copyButton");
+const email = "galeanosantiago10@gmail.com";
+
+copyButton.addEventListener("click", () => {
+  // Crear un elemento de texto temporal
+  const tempInput = document.createElement("input");
+  tempInput.value = email;
+  document.body.appendChild(tempInput);
+
+  // Seleccionar el texto dentro del elemento temporal
+  tempInput.select();
+  tempInput.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+  // Copiar el texto seleccionado al portapapeles
+  document.execCommand("copy");
+
+  // Eliminar el elemento temporal
+  document.body.removeChild(tempInput);
+
+  // Mostrar mensaje de éxito
+ 
+  // Ejecutamos SweetAlert
+     Swal.fire({
+        icon: "success",
+        text: "¡Correo copiado al portapapeles!",
+        timer: 700, // <- Ocultar dentro de 0.7 segundos
+    });
+});
 
 
 //------------ Para Activar SweetAlert al enviar el correo ------------  
@@ -329,60 +367,3 @@ async function handleSubmit(event) {
     });
     }
 }
-
-
-/*--------------Prueba generar carousel-item dinamicamente--------------*/
-
-let contenedorCarousel = document.querySelector(".carousel-item-js");
-
-let fragmento = document.createDocumentFragment();
-let pruebaDiv = document.createElement("DIV");
-let pruebaDiv2 = document.createElement("DIV");
-let imgPrueba = document.createElement("img");
-
-// class Cards{
-//     constructor
-// }
-let cards = [{
-    number: "1",
-    img: "../img/css-logo.webp",
-    descripcion: "Sistema de ventas de stock"
-}]
-
-// new Cards = 
-
-let alumnos=[{
-    nombre:"Dolor Suffering",
-    email: "dolor@pain.com",
-    materia:"Fisica 3"
-},{
-    nombre:"Karina Guerrera",
-    email: "kar@pain.com",
-    materia:"Literatura"
-},{
-    nombre:"Jorge Ramirez",
-    email: "the_george@pain.com",
-    materia:"Matematica"
-},{
-    nombre:"Facundo Roberto",
-    email: "facu@pain.com",
-    materia:"Sexologia 2"
-},{
-    nombre:"Iron u u",
-    email: "hierro@pain.com",
-    materia:"Educacion fisica"
-}];
-
-// imgPrueba.src="./img/proyecto4.webp";
-// pruebaDiv.classList.add("contenedor-cards");
-// pruebaDiv2.classList.add("card-project");
-
-// pruebaDiv2.appendChild(imgPrueba);
-// pruebaDiv.appendChild(pruebaDiv2);
-// fragmento.appendChild(pruebaDiv);
-
-// contenedorCarousel.appendChild(fragmento);
-
-// for(i=0;){
-
-// }
