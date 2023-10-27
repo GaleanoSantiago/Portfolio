@@ -27,17 +27,6 @@ addEventListener("load",()=>{
     document.querySelector(".btn-cv").classList.add("btn-animation");
 })
 
-// ------ Version de prueba para automatizar la animacion de subrayado de los titulos ------
-
-// const subrayados = document.querySelectorAll(".subrayado");
-// // console.log(subrayados);
-// let subsBounding = [];
-// subrayados.forEach(subs =>{
-//     // console.log(subs);
-//     subsBounding.push(subs);
-// })
-// console.log(subsBounding);
-
 addEventListener("scroll",()=>{
     
     //scroll para que el menu se fije en el top de la pantalla

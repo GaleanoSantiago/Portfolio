@@ -871,12 +871,6 @@ svg {
 
 /*--------------------------------- Proyectos ---------------------------------*/
 
-.section-projects{
-    background:var(--z1);
-    /* height:800px; */
-    padding:80px 0;
-}
-
 .contenedor-btn-glass{
     width:200px;
     margin:auto;
@@ -946,112 +940,106 @@ svg {
     fill:var(--bs-indigo);
 }
 
-.col-projects{
-    border:1px solid var(--bs-secondary);
+
+
+/* ---------- Nuevas tarjetas de proyectos ---------- */
+.section-proys{
+    background:var(--z1);
+    padding:80px 0;
+
 }
 
-.card-projectX{
-	width:100%;
+.card-proy{
+    width:100%;
     max-width:550px;
     height:300px;
-    margin:auto;
-    margin-top:40px;
-    overflow:hidden;
-    border:1px solid var(--bs-white);
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+    border:1px solid var(--bs-light);
     border-radius:10px;
-    transition:.3s;
-
+    overflow:hidden;
 }
-.img-project{
-    width:100%;
-    height:100%;
-    transition:.3s;
+
+.card-proy:hover > .fondo img{
+    transform: scale(1.1);
+    transition: all .4s ease;
+    
+}
+
+.card-proy:hover > .overlay{
+    opacity: 1;
+    transition: .4s ease;
+}
+
+.section-proys .col-12.col-lg-6{
+    padding:20px 0;
+}
+
+.fondo{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.fondo > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index:1;
+    transition: all .4s ease;
+}
+
+.overlay{
+    opacity: 0;
+    position: absolute;
     background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    animation:all .3s !important;
-}
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 
-.card-projectX:hover .img-project{
-    transform:scale(1.1);
-    transition:all .3s;
-}
-
-.card-projectX:hover .contenedor-info-glassX,
-.card-projectX:focus .contenedor-info-glassX{
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    animation:all .3s !important;
-}
-
-.pc-10{
-    background:url(../img/proyectoCatalogo2.webp);
-    background-size:cover;
-}
-.pc-9{
-    background:url(../img/proy-node-1.webp);
-    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+	box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    transition: .4s ease;
+    z-index:2;
 
 }
-.pc-8{
-    background:url(../img/proyecto6md.webp);
-    background-size:cover;
-    background-position:50% 10%;
-}
-.pc-7{
-    background:url(../img/proyecto5.webp);
-    background-size:cover;
-}
-.pc-1{
-    background:url(../img/proyecto1min.webp);
-    background-size:cover;
-}
-.pc-2{
-    background:url(../img/prota2min.webp);
-    background-size:cover;
-}
-.pc-3{
-    background:url(../img/proyecto2min.webp);
-    background-size:cover;
-}
-.pc-4{
-    background:url(../img/proyecto_ru1min.webp);
-    background-size:cover;
-}
-.pc-5{
-    background:url(../img/proyecto3min.webp);
-    background-size:cover;
-}
-.pc-6{
-    background:url(../img/proyecto4min.webp);
-    background-size:cover;
+
+.overlay > p{
+    color: whitesmoke;
+    font-size: 1.5rem;
 }
 
+.overlay > a{
+    width: 120px;
+    height: 50px;
+    color: whitesmoke;
+    text-decoration: none;
+    border: 2px solid whitesmoke;
+    padding: 5px;
 
-.contenedor-info-glassX{
-    width:100%;
-    height:100%;
-    opacity:0;
-    transition:all .3s;
-    position:relative;
-    /* z-index:2; */
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.overlay > a:hover{
+    background-color: whitesmoke;
+    color: black;
+    border-color: #000;
+    transition: .3s;
 }
-.card-projectX:hover .contenedor-info-glassX,
-.card-projectX:focus .contenedor-info-glassX{
-    opacity:1;
-    transition:all .3s;
-}
+
 
 /* -------------------------------- Modal -------------------------------------- */
-/* .modal{
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-} */
+
 .modal-content{
     background-color:var(--z4);
     border:1px solid var(--bs-secondary);
@@ -1367,10 +1355,12 @@ footer{
 
     /*----------------------------Proyectos----------------------------*/
     
-    .card-projectX{
+    .card-projectX, .card-proy{
         height:250px;
     }
-
+    .card-proy{
+        width:95%;
+    }
     .contenedor-btn-glass{
         width:150px;
     }
@@ -1385,25 +1375,15 @@ footer{
 
 /* Escritorio pequeño / tablet */
 @media only screen and (min-width: 768px) and (max-width: 991px){
-    
-   
     /*----------------------------Seccion sobre mi----------------------------*/
     p, li{
         font-size:15px;
     }
-    
-    
-    /* .section-about-me{
-        height:755px;
-    } */
+
     .section-about-me>.container{
         min-width:95% !important;
     }
 
-    /* .contenedor-about-me{
-        padding-top:40px;
-    } */
-    
     .contenedor-about-me .row{
         padding-top:20px;
     }
@@ -1413,10 +1393,6 @@ footer{
     }
 
     /*----------------------------Seccion habilidades----------------------------*/
-/* 
-    .section-skills{
-        height:1530px;
-    } */
 
     .habilidades-2{
     margin-top:40px;
@@ -1427,9 +1403,6 @@ footer{
     }
     /*----------------------------Seccion proyectos----------------------------*/
 
-    /* .section-projects{
-        height:750px;
-    } */
 
     .card-project{
         width:100%;
@@ -1437,59 +1410,33 @@ footer{
         /* overflow:visible; */
     }
     
-    .card-projectX{
+    .card-projectX, .card-proy{
         height:190px;
         max-width:334px;
     }
 
-    .glass{
-       
-        transform:translateY(-200px);
-        height:200px;
-        z-index:2;          /*Para que este por encima de la imagen*/
-        position:relative;
-        opacity:0;          /*Para que el glass sea visible o no*/
-        transition:.3s;
-        /* border:1px solid #fff; */
-    }
-    
-    .contenedor-info-glass{
-        height: 95%;
-    }
-    /* .contenedor-info-glass{
-        height:80%;
-    } */
-
-    .contenedor-info-glass p{
-        font-size:11px;
-        text-align:left;
-
-    }
-    .contenedor-info-glass h2{
-        font-size:16px;
-    }
-
-
     .contenedor-btn-glass{
-        width:130px;
+        width:200px;
         margin:auto;
-        margin-top:7px;
         border-radius: 500px;
     }
     
     .btn-glass{
-       
-        width:130px;
+        width:200px;
         padding-top:4px;
         padding-bottom:4px;
-        font-size: 14px;
     }
 
-
+    .overlay{
+        flex-direction:column;
+        justify-content: center !important;
+        align-items: center;
+    
+    }
     /*----------------------------Seccion contactos----------------------------*/
 
     .section-contact{
-    height:750px;
+        height:750px;
     }
     .contenedor-contact>p{
         width:80%;
@@ -1508,12 +1455,7 @@ footer{
     }
 
 /*----------------------------Sobre mi----------------------------*/
-    /* .section-about-me{
-        height:940px;
-    } */
-    /* .contenedor-about-me{
-        padding-top:30px;
-    } */
+
     .contenedor-about-me .row{
         padding-top:0;
     }
@@ -1563,15 +1505,6 @@ footer{
 
     /*----------------------------Seccion habilidades----------------------------*/
 
-
-    /* .section-skills{
-        height:1570px;
-    }
-    
-    .contenedor-skills{
-        padding-top:70px;
-    }
-     */
     .contenedor-logos{
         margin-top:50px;
     }
@@ -1595,71 +1528,33 @@ footer{
     
     /*----------------------------Seccion proyectos----------------------------*/
 
-    /* .section-projects{
-        height:570px;
-    } */
-/* 
-    .contenedor-projects{
-        padding-top:70px;
-    } */
-
-    /* project-cards */
-
     .card-project{
         width:100%;
         height:290px;
         /* overflow:visible; */
     }
     
-    
-    .glass{
-        width:100%;
-        
-        transform:translateY(-300px);
-        height:320px;
-    
-    }
-
     .card-project:hover img{
         transform:translateY(10px) scale(1.1);
 
         }
     
-    .contenedor-info-glass{
-        height:80%;
-    }
-
-    .contenedor-info-glass h2{
-        font-size:22px;
-    }
-
-    .contenedor-info-glass p{
-        font-size:15px;
-        text-align:left;
-
-    }
-    .contenedor-info-glass li{
-        font-size:11px;
-        text-align:left;
-    }
-    
-
     .contenedor-btn-glass{
-        width:150px;
+        width:200px;
         margin:auto;
-        margin-top:7px;
+        /* margin-top:7px; */
 
         border-radius: 500px;
     }
     
     .btn-glass{
        
-        width:150px;
+        width:200px;
         padding-top:5px;
         padding-bottom:5px;
-        font-size: 14px;
+        /* font-size: 14px; */
     }
-
+    
 
 
     /*----------------------------Seccion contactos----------------------------*/
@@ -1776,12 +1671,7 @@ footer{
 
 
 /*----------------------------Sobre mi----------------------------*/
-    /* .section-about-me{
-        height:940px;
-    } */
-    /* .contenedor-about-me{
-        padding-top:40px;
-    } */
+    
     .contenedor-about-me .row{
         padding-top:0;
     }
@@ -1799,7 +1689,7 @@ footer{
         animation: efectoSombra 3s ease infinite;
         animation-delay: .5s;
     }
-      
+    
     @keyframes efectoSombra{
         0%{
             width:160px;
@@ -1839,15 +1729,6 @@ footer{
 
     /*----------------------------Seccion habilidades----------------------------*/
 
-
-    /* .section-skills{
-        height:1300px;
-    } */
-    
-    /* .contenedor-skills{
-        padding-top:70px;
-    } */
-    
     .contenedor-logos{
         margin-top:20px;
     }
@@ -1941,16 +1822,6 @@ footer{
 
     /*----------------------------Seccion proyectos----------------------------*/
     
-    /* .section-projects{
-        height:auto;
-        padding-bottom:80px;
-    } */
-/* 
-    .contenedor-projects{
-        padding-top:70px;
-    } */
-
-    /* project-cards */
 
     .card-project{
         width:100%;
@@ -1958,56 +1829,27 @@ footer{
         /* overflow:visible; */
     }
     
-
-    .glass{
-        width:100%;
-        
-        transform:translateY(-340px);
-        height:400px;
-    
+    .card-proy{
+        width:95%;
     }
 
     .card-project:hover img{
         transform:translateY(10px) scale(1.1);
 
         }
-    
-    .contenedor-info-glass{
-        height:85%;
-    }
-
-    .contenedor-info-glass h2{
-        font-size:22px;
-    }
-
-    .contenedor-info-glass p{
-        font-size:15px;
-        text-align:left;
-
-    }
-    .contenedor-info-glass li{
-        font-size:11px;
-        text-align:left;
-    }
-    
 
     .contenedor-btn-glass{
-        width:150px;
+        width:200px;
         margin:auto;
-        margin-top:7px;
 
         border-radius: 500px;
     }
     
     .btn-glass{
-       
-        width:150px;
+        width:200px;
         padding:10px;
-        font-size: 14px;
+        /* font-size: 14px; */
     }    
-    /* .pc-7,.pc-8{
-        background-size:cover;
-    } */
     .pc-1, .pc-2, .pc-3, .pc-4, .pc-5, .pc-6, .pc-7,.pc-8, .pc-9, .pc-10, .pc-11{
         background-position: center;
     }
@@ -2132,63 +1974,35 @@ footer{
     }
     /*----------------------------Seccion Proyectos ----------------------------*/
 
-    /* project-cards */
 
     .card-projectX{
         width:100%;
         height:240px;
    
     }
-    .card-project:hover img{
-        transform:translateY(10px) scale(1.1);
-        transition:.3s;
-    }
-    
-    .glass{
-        width:100%;
-        
-        transform:translateY(-290px);
-        height:300px;
-    
-    }
-    
-    .contenedor-info-glass{
-        margin:auto;
 
-        height:85%;
+    .card-proy{
+        height:240px;
     }
 
-    .contenedor-info-glass p{
-        font-size:13px;
-        text-align:left;
+    /* .contenedor-btn-glass{
+        width:200px;
 
-    }
-    .contenedor-info-glass h2{
-        font-size:15px;
-    }
-    
-
-    .contenedor-btn-glass{
-        width:140px;
-
-    }
-    
+    } */
+/*     
     .btn-glass{
         
         width:140px;
         padding:9px;
         
-        /* font-size: 1px; */
-    }
-
-    /* .btn-glass>.svg-git{
-        width:13%;
-        display:none
     } */
+    .overlay{
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width:375px){
-    .card-projectX{
+    .card-projectX, .card-proy{
         height:200px;
     }
 }
@@ -2238,13 +2052,6 @@ footer{
 
 
     /*----------------------------Seccion sobre mi----------------------------*/
-    
-    /* .section-about-me{
-        height:920px;
-    } */
-    /* .contenedor-about-me{
-        padding-top:40px;
-    } */
     .contenedor-about-me .row{
         padding-top:0;
     }
@@ -2311,36 +2118,14 @@ footer{
 
     /*----------------------------Seccion habilidades----------------------------*/
 
-    /* .section-skills{
-        height:1320px;
-    } */
-
+    
 
     /*----------------------------Proyectos----------------------------*/
 
     .card-projectX{
-        /* width:350px; */
+        width:90%;
         height:200px;
-   
     }
-    .glass{
-        width:100%;
-        
-        transform:translateY(-201px);
-        height:225px;
-    
-    }
-    .contenedor-info-glass{
-        margin:auto;
-
-        height:90%;
-    }
-
-    .btn-glass>.svg-git{
-        width:13%;
-        display:none
-    }
-
     /*----------------------------habilidades----------------------------*/
 
     .habilidades-2 p, li{
@@ -2388,44 +2173,10 @@ footer{
 
 
     /*----------------------------Seccion habilidades----------------------------*/
-    /* .section-skills{
-        height:1355px;
-    } */
+    
     /*-----------------------------Seccion de Proyectos--------------------------*/
 
-    /* .card-projectX{
-        height:200px;
-   
-    } */
-    .glass{
-        width:100%;
-        
-        transform:translateY(-201px);
-        height:220px;
-    
-    }
-    .contenedor-info-glass{
-        margin:auto;
 
-        height:90%;
-    }
-
-    /* .contenedor-btn-glass{
-        width:140px;
-    }
-    
-    .btn-glass{
-        
-        width:140px;
-        padding:4px;
-        
-        font-size: 11px;
-    } */
-
-    .btn-glass>.svg-git{
-        width:13%;
-        display:none
-    }
     /*--------------------------------- Contacto ---------------------------------*/
 
   
