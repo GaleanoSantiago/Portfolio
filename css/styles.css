@@ -747,6 +747,10 @@ a>.btn-cv{
     margin-top:20px;
     width:130px;
 }
+#laravel-logo{
+    margin-top:20px;
+    width:130px;
+}
 .section-skills{
     padding:70px 0;
     background:var(--z4);
@@ -1454,7 +1458,7 @@ footer{
         font-size:13px;
     }
 
-/*----------------------------Sobre mi----------------------------*/
+    /*----------------------------Sobre mi----------------------------*/
 
     .contenedor-about-me .row{
         padding-top:0;
@@ -1796,6 +1800,10 @@ footer{
         margin-bottom:-30px;
     }
     #flask-logo{
+        width:110px;
+        margin-bottom:-30px;
+    }
+    #laravel-logo{
         width:110px;
         margin-bottom:-30px;
     }
