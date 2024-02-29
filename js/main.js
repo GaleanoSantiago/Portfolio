@@ -251,8 +251,8 @@ modal.forEach(mdl => {
         con un diseño moderno, llamativo y estetico, utilizando animaciones suaves y efectos 
         dinamicos interactivos para dar vida al tema que se presenta.`,
         lenguajes: `HTML - CSS - JS`,
-        proyecto:`https://galeanosantiago.github.io/humaya-CaC-ReactJS/`,
-        codigo:`https://github.com/GaleanoSantiago/humaya-CaC-ReactJS`
+        proyecto:`https://galeanosantiago.github.io/expo-disco/`,
+        codigo:`https://github.com/GaleanoSantiago/expo-disco`
     },
     {
         titulo:"Tecnicatura Superior en Desarrollo de Software - Pagina Web",
