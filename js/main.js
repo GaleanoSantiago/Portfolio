@@ -220,7 +220,82 @@ modal.forEach(mdl => {
         lenguajes: `HTML - CSS - JS - SQL - PHP`,
         proyecto:`https://galeanosantiago.github.io/famago-demo/`,
         codigo:`https://github.com/GaleanoSantiago/famago-demo`
+    },
+    {
+        titulo:"Aplicación de Tareas Python Flask",
+        descripcion:`
+        Aplicación web de tareas hecho con python flask y Sqlite. Se ejecuta el 
+        app.py de /backend primero y despues se abre el /frontend/index.html 
+        desde un servidor, que puede ser local o no. Funciona por medio de una 
+        API que envia la información de la bd desde el backend al frontend.`,
+        lenguajes: `HTML - CSS - JS - Python - Flask - Sqlite`,
+        proyecto:`#`,
+        codigo:`https://github.com/GaleanoSantiago/python-crud-flask-tasks`
+    },
+    {
+        titulo:"Pagina Web para Dulceria Humaya",
+        descripcion:`
+        Pagina web de una dulceria en la que incluye sus productos, 
+        recetas, información de sus locales en tiempo real y un formulario
+        de contacto funcional.`,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://galeanosantiago.github.io/humaya-CaC-ReactJS/`,
+        codigo:`https://github.com/GaleanoSantiago/humaya-CaC-ReactJS`
+    },
+    {
+        titulo:"Exposición Web - Almacenamiento en Disco",
+        descripcion:`
+        Pagina web creada para ser utilizada como una presentación informativa sobre 
+        el almacenamiento en disco, su definición, clasificación, seguridad de datos y 
+        evolución a lo largo del tiempo. Fue creada con html, css, bootstrap y javascript
+        con un diseño moderno, llamativo y estetico, utilizando animaciones suaves y efectos 
+        dinamicos interactivos para dar vida al tema que se presenta.`,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://galeanosantiago.github.io/humaya-CaC-ReactJS/`,
+        codigo:`https://github.com/GaleanoSantiago/humaya-CaC-ReactJS`
+    },
+    {
+        titulo:"Tecnicatura Superior en Desarrollo de Software - Pagina Web",
+        descripcion:`
+        Pagina web informativa sobre la tecnicatura superior en desarrollo de software ofrecida 
+        en el Instituto Superor de Formación Docente Continua y Tecnica "Felix Atilio Cabrera".
+        En ella se detalla información acerca de la carrera y el instituto donde se dicta. Es completamente
+        responsive y cuenta con un diseño estetico y moderno, con atractivas animaciones y efectos dinamicos.
+        También posee un boton para solicitar la inscripción a la carrera.`,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://galeanosantiago.github.io/pagina-software/`,
+        codigo:`https://github.com/GaleanoSantiago/pagina-software`
+    },
+    {
+        titulo:"Pagina Web del ISFDCyT 'Felix Atilio Cabrera'",
+        descripcion:`
+        Sitio Web del Instituto Superor de Formación Docente Continua y Tecnica "Felix Atilio Cabrera" ubicado en Formosa 
+        Capital, ofrece información sobre todas las carreras disponibles asi como tambien del instituto mismo 
+        y sus metodos de contacto. La infomación de todas las carreras se obtiene de un archivo json que trae 
+        los datos con js y lo muestra en el archivo html, por lo que es completamente dinamico. Ofrece un boton para 
+        inscribirse en las carreras vigentes.`,
+        lenguajes: `HTML - CSS - JS`,
+        proyecto:`https://galeanosantiago.github.io/FaC/`,
+        codigo:`https://github.com/GaleanoSantiago/FaC`
+    },
+    {
+        titulo:"Sitio Web de EcoIngenio + Lienzo de Canva para Diseñar Vasos",
+        descripcion:`
+        Sitio Web creado con Laravel para empresa de Resistencia "EcoIngenio" que comercializa vasos ecologicos, el sitio web
+        continua en desarrollo pero posee un lienzo de diseño de vasos creado con canva y la biblioteca fabricJS ya finalizado y en uso por los clientes, dicho lienzo 
+        posee una gran cantidad de opciones de diseño tales como agregar textos con tipografia personalizable, carga de elementos, 
+        un sistema de colores para los elementos y el lienzo, un medidor para los tipos de vasos y la opcion de subir imagenes, las 
+        cuales primero pasan por un conversor que lo convierte al tipo de imagen SVG, lo que permite su personalización total. Este 
+        cnversor funciona puramente con javascript y es bastante potente. Posee también funciones complejas como descargar el diseño 
+        en PDF y poder visualizar un modelo 3D del ecovaso con su diseño personalizado. Crear este proyecto fue un reto ya que tuve
+        que aprender laravel desde cero y familiarizarme con la biblioteca de fabricjs en relativo poco tiempo debido al periodo de entrega.
+        Es 100% responsive y posee una serie de CRUDS del lado del administrador para que los empleados de la empresa puedan cargar los 
+        colores, imagenes, tipografias y medidores disponibles. Por motivos de confidencialidad y seguridad, el codigo fuente no se encuentra disponible.`,
+        lenguajes: `HTML - CSS - JS - FabricJS  - PHP - SQL - Laravel`,
+        proyecto:`https://prueba.ecoingenio.com.ar/disenio`,
+        codigo:`https://prueba.ecoingenio.com.ar/disenio`
     }
+    
     ]
     mdl.addEventListener("click", ()=>{
         // console.log(valueMdl);
@@ -238,7 +313,7 @@ modal.forEach(mdl => {
         let proyecto;
         let target;
         // Para el proyecto del portafolio
-        if(valueMdl==1){
+        if(valueMdl==1 || valueMdl==10){
             proyecto = "#proyectos";
             target = "";
         }else{
