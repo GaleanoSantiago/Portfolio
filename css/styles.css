@@ -1008,12 +1008,19 @@ svg {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
+	flex-wrap:wrap;
     /* flex-direction: column; */
 	box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
     transition: .4s ease;
     z-index:2;
 
+}
+.overlay h3{
+    padding:0 15px;
+    width:100%;
+	text-align:center;
+	color:#fafafa;
 }
 
 .overlay > p{
@@ -1435,7 +1442,10 @@ footer{
         flex-direction:column;
         justify-content: center !important;
         align-items: center;
-    
+    }
+    .overlay h3{
+        font-size:1.1rem;
+        padding:10px 15px;
     }
     /*----------------------------Seccion contactos----------------------------*/
 
@@ -1986,26 +1996,17 @@ footer{
     .card-projectX{
         width:100%;
         height:240px;
-   
     }
 
     .card-proy{
         height:240px;
     }
-
-    /* .contenedor-btn-glass{
-        width:200px;
-
-    } */
-/*     
-    .btn-glass{
-        
-        width:140px;
-        padding:9px;
-        
-    } */
     .overlay{
         flex-direction: column;
+    }
+    .overlay h3{
+        font-size:1.1rem;
+        padding:10px 15px;
     }
 }
 

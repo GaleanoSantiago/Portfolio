@@ -295,12 +295,14 @@ modal.forEach(mdl => {
         proyecto:`https://prueba.ecoingenio.com.ar/disenio`,
         codigo:`https://prueba.ecoingenio.com.ar/disenio`
     }
-    
     ]
+
+    // Para agregar el titulo a las cards de los proyecto
+    const h3 = mdl.closest(".contenedor-btn-glass").previousElementSibling;
+    h3.textContent=infoModales[valueMdl].titulo;
+
+    // Para cargar la informacion dentro del modal
     mdl.addEventListener("click", ()=>{
-        // console.log(valueMdl);
-        // console.log(infoModales[valueMdl].titulo);
-        // console.log(infoModales[valueMdl].descripcion);
         
         modalHeader.innerHTML = `
         <h1 class="modal-title fs-5" id="staticBackdropLabel">${infoModales[valueMdl].titulo}</h1>
