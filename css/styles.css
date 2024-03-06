@@ -1991,6 +1991,9 @@ footer{
     .card-projectX, .card-proy{
         height:200px;
     }
+    .modal-footer{
+        gap:15px;
+    }
 }
 /*Celulares angostos*/
 @media only screen and (max-width:365px){
