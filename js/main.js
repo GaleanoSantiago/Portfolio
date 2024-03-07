@@ -310,7 +310,7 @@ modal.forEach(mdl => {
         `;
         modalBody.innerHTML = `
         <p class="text-gray">${infoModales[valueMdl].descripcion}</p>
-        <p>Lenguajes Utilizados: <span class="text-gray">${infoModales[valueMdl].lenguajes}</span></p>
+        <p>Tecnologias Utilizadas: <span class="text-gray">${infoModales[valueMdl].lenguajes}</span></p>
         `;
         let proyecto;
         let target;

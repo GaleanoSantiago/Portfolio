@@ -1991,6 +1991,9 @@ footer{
     .card-projectX, .card-proy{
         height:200px;
     }
+    /* .modal-title{
+        font-size:1.1rem;
+    } */
     .modal-footer{
         gap:15px;
     }
