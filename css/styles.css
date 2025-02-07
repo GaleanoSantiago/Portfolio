@@ -73,6 +73,13 @@
     --z2:#2c2e43;
     --z3:#222733;
     --z4:#080d17;
+
+    /* New */
+    --z5:#241c41;
+    --z6:#1a1535;
+    --z7:#181230;
+    --z8: #140f2b;
+    --techBlue: #2c359b;
     --dark-github:#0d1117;
     --dark-github-2: #161b22;
     --dark-beauty:#1e242c;
@@ -95,7 +102,7 @@ body{
     max-width: 100% !important;
     overflow-x: hidden !important;
     scroll-behavior: smooth;          
-
+    color:var(--bs-gray-500);
 }
 
 .total-space{
@@ -140,6 +147,10 @@ body{
     margin:auto;
     opacity:0;
 }
+.subrayado.visible{
+    opacity:1;
+
+}      
 
 /* No se utiliza todavia 29/08/22 
 - Actualizacion: Ya se utiliza satisfactoriamente 10/09 22*/
@@ -675,73 +686,262 @@ a>.btn-cv{
     border-right: 15px solid var(--z4);
     left:-15px;
 }
+/*--------------------------------- Experiencias Laborales ---------------------------------*/
+
+.experiencia{
+    padding: 70px 0;
+    padding-bottom:10px;
+    background:var(--z4);
+}
+
+/*---------------------- Logos de clientes ---------------------- */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.clientes-section{
+    padding:25px 0;
+}
+
+.div-subtitulo{
+    display:flex;
+    justify-content:center;
+    position:relative;
+    padding:20px 0;
+    z-index:1;
+}
+.div-subtitulo .subtitulo{
+    background:var(--z7);
+    /* background: linear-gradient(145deg, #181230, #241c41); */
+
+    padding: 5px 15px;
+    border-radius:5px;
+    position:absolute;
+    bottom:-25px;
+    z-index:2;
+    color:#fff;
+    
+}
+.logos {
+    overflow: hidden;
+    padding: 25px 0;
+    background: var(--z7);
+    /* background: linear-gradient(145deg, #181230, #241c41); */
+
+    white-space: nowrap;
+    position: relative;
+    width:80%;
+    margin:auto;
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(8, 13, 23, 0), #080d17);
+    width: 150px; /* Ajusta este valor para reducir la amplitud */
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(8, 13, 23, 0), #080d17);
+    width: 150px; /* Ajusta este valor para reducir la amplitud */
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: flex;
+    animation: 30s slide infinite linear;
+
+    /*  */
+    justify-content:space-around;
+    gap:80px;
+}
+
+.logos-slide .cliente-box {
+    width: 150px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    /* height: 100px; */
+    /* margin: 0 40px; */
+}
+.logos-slide .cliente-box .img-div{
+    width: 100px;
+    height: 100px;
+    display:flex;
+    align-items:center;
+}
+.cliente-box .img-div.div-rounder{
+    border-radius:500px;
+    overflow:hidden;
+}
+.logos-slide .cliente-box img{
+    width:100%;
+}
+.logos-slide .cliente-box span {
+    text-align: center; /* Centra el texto */
+    word-wrap: break-word !important; /* Permite que el texto se divida si es demasiado largo */
+    color: var(--bs-light);
+}
+/* -------------------- Contenedores de experiencia ------------------------ */
+
+.contenedor-trabajos{
+    /* border:1px solid #fff; */
+    padding:70px 0;
+    display:flex;
+    gap:60px;
+    flex-direction:column;
+    align-items:center;
+}
+.box-job{
+    display:flex;
+    flex-wrap:wrap;
+    /* border:1px solid #fff;  */
+    width:90%;
+    /* background:var(--z7); */
+    background: linear-gradient(145deg, #181230, #241c41);
+
+    border-radius:10px;
+    overflow:hidden;
+    padding:20px;
+    box-shadow: -7px 7px 7px rgba(0, 0, 0, 0.1);
+
+}
+.box-job .titulo-job{
+    width:100%;
+}
+.img-job{
+    width:40%;
+    /* height:400px; */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:10px;
+}
+.enlaces-job{
+    /* padding:10px 0; */
+    display:flex;
+    gap:15px;
+    justify-content:center;
+}
+.fa-brands.fa-github{
+    font-size:1.3rem;
+}
+.img-job img{
+    width:100%;
+    /* border:1px solid #fff; */
+}
+.description-job{
+    width:60%;
+    /* background:var(--z5); */
+    /* border:1px solid #fff;  */
+    padding:0 20px;
+}
+.description-job .container-fluid{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:0 !important;
+    padding-bottom:15px !important;
+}
+.description-job .container-fluid .titulo-job{
+    width:80%;    
+}
+.titulo-job .title{
+    color:var(--bs-light);
+    font-family: monospace;
+}
+.description-job .logo-job{
+    width:100px;
+    height:100px;
+    border-radius:7px;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.description-job .logo-job img{
+    width:100%;
+}
+.btn.btn-job{
+    background:var(--techBlue);
+    color: #fff;
+    border:1px solid #fff;
+    border-radius:7px;
+    padding:8px 15px;
+}
+.description-job .info-empresa{
+    padding:15px 0;
+}
+.description-job .tecnologias{
+    /* padding:10px 0; */
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:15px;
+}
+.description-job .tecnologias .tech-icon{
+    padding: 3px 10px;
+    color:var(--bs-light);
+    border-radius:30px;
+    border:1px solid var(--bs-light);
+    /* background: rgba(190, 18, 60, 0.6); */
+    background:var(--techBlue);
+}
+
+.content-job p{
+    text-align:justify;
+}
 /*--------------------------------- Habilidades ---------------------------------*/
 
-/* imagenes de lenguajes */
-#html-logo{
-    margin-top:20px;
-    width:122px;
-    }
-#css-logo{
-    margin-top:15px;
-    width:135px;
-}
-#js-logo{
-    margin-top:20px;
-    width:130px;
-}
-#git-logo{
-    margin-top:20px;
 
-    width:125px;
-}
-#php-logo{
-    margin-top:20px;
-
-    width:150px;
-}
-#sql-logo{
-    margin-top:20px;
-    width:135px;
-}
-#node-logo{
-    margin-top:20px;
-    width:130px;
-}
-#express-logo{
-    margin-top:20px;
-    width:130px;
-}
-#mongodb-logo{
-    margin-top:20px;
-    width:130px;
-}
-#python-logo{
-    margin-top:20px;
-    width:130px;
-}
-#flask-logo{
-    margin-top:20px;
-    width:130px;
-}
-#laravel-logo{
-    margin-top:20px;
-    width:130px;
-}
 .section-skills{
     padding:70px 0;
     background:var(--z4);
 }
 
-.contenedor-logos{
+/* .contenedor-logos{
     margin-top:100px;
+} */
+
+.div-flex-logo{
+    display:flex;
+    justify-content:space-around;
+    padding:30px 60px;
+    gap:80px;
+    /* border:1px solid #fff; */
+    flex-wrap:wrap;
 }
 
+.subtitulo{
+    color:var(--bs-primary);
+    font-family: monospace;
+    /* font-weight: bold; */
+    text-align:center;
+}
 
 /*      ------------      efecto logos rotate    ------------      */
 .td-figure{
     /* perspective: 1500px; */
-    width:190px;
+    width:150px;
     margin:auto;
 }
 .td-figure> img{
@@ -751,13 +951,26 @@ a>.btn-cv{
     
 .td-figure:hover img{
     transition: .3s;
-    transform: scale(1.1);
+    transform: scale(1.02);
     border-radius:0.25em;
     
     filter: saturate(300%) brightness(120%);
 }
 
+.div-flex-logo .td-figure{
+    display:flex;
+    width:100px;
+    align-items:center;
+    flex-direction:column;
+    
+}
+.div-flex-logo .td-figure img{
+    width:100% !important;
+    /* border:1px solid #fff; */
+}
+
 .tooltip{
+    /* background:var(--techBlue); */
     background: rgba(190, 18, 60, 0.6);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -771,16 +984,17 @@ a>.btn-cv{
     padding:5px 0;
     font-size:1.1rem;
     width:100px;
-    opacity:0;
-    transform:translate(0px, -100px);
+    opacity:1;
+    transform:translate(0px, -135px);
     transition:.3s;
     margin:auto;
+    z-index:2;
 }
 
 .td-figure:hover .tooltip{
-    transform:translate(0px, -150px);
-    opacity:1;
-    transition:.4s ease, opacity 0.4s ease;
+    transform:translate(0px, -140px);
+    /* opacity:1; */
+    transition:.4s ease;
 }
 
 
@@ -1379,6 +1593,19 @@ footer{
     .info-about-me>h3{
         text-align:left;
     }
+    /*----------------------------Seccion experiencia----------------------------*/
+    .box-job{
+        flex-direction:column;
+    }
+    .img-job{
+        width:100%;
+    }
+    .img-job img{
+        border-radius:10px;
+    }
+    .description-job{
+        width:100%;
+    }
 
     /*----------------------------Seccion habilidades----------------------------*/
 
@@ -1493,6 +1720,21 @@ footer{
         
     }
 
+    /*----------------------------Seccion experiencia----------------------------*/
+    .box-job{
+        flex-direction:column;
+        padding:20px;
+    }
+    .img-job{
+        width:100%;
+    }
+    .img-job img{
+        border-radius:10px;
+    }
+    .description-job{
+        width:100%;
+        padding:0;
+    }
 
     /*----------------------------Seccion habilidades----------------------------*/
 
@@ -1633,7 +1875,7 @@ footer{
     }
 
     p, li{
-        font-size:13px;
+        font-size:14px;
     }
     
 
@@ -1717,7 +1959,44 @@ footer{
     .info-about-me li{
         font-size:12px;
     }
+    /*----------------------------Seccion experiencia----------------------------*/
+    .logos{
+        width:100%;
+    }
+    .logos-slide {
+        gap:50px;
+        animation: 20s slide infinite linear;
 
+    }
+    .logos-slide .cliente-box {
+        width: 100px;
+        /* border:1px solid #fff; */
+    }
+    
+    .logos-slide .cliente-box .img-div{
+        width: 80px;
+        height: 80px;
+        /* border:1px solid #fff; */
+
+    }
+    .logos-slide .cliente-box span {
+        /* width: 100%;  */
+        font-size: 12px; /* Ajusta el tamaño del texto si es necesario */
+    }
+    .box-job{
+        flex-direction:column;
+        padding:20px;
+    }
+    .img-job{
+        width:100%;
+    }
+    .img-job img{
+        border-radius:10px;
+    }
+    .description-job{
+        width:100%;
+        padding:0;
+    }
     /*----------------------------Seccion habilidades----------------------------*/
 
     .contenedor-logos{
@@ -1728,72 +2007,16 @@ footer{
         width:80%;
     }
 
-    .tooltip{
+    /* .tooltip{
         transform:translate(0px, -50px);
     }
 
     .td-figure:hover .tooltip{
         transform:translate(0px, -100px);
    
-    }
+    } */
 
-    /* imagenes de lenguajes */
-    #html-logo{
-        margin-top:25px;
-        width:95px;
-        margin-bottom:-30px;
-
-    }
-    #css-logo{
-        width:115px;
-        margin-bottom:-30px;
-
-    }
-    #js-logo{
-        width:90px;
-        margin-bottom:-30px;
-
-    }
-    #git-logo{
-        width:105px;
-        margin-bottom:-30px;
-
-    }
-    #php-logo{
-        width: 130px;
-        margin-bottom:-30px;
-
-    }
-    #sql-logo{
-        width:115px;
-        margin-bottom:-30px;
-    }
-    #node-logo{
-        width:110px;
-        margin-bottom:-30px;
-
-    }
-    #express-logo{
-        width:110px;
-        margin-bottom:-30px;
-
-    }
-    #mongodb-logo{
-        width:110px;
-        margin-bottom:-30px;
-    }
-    #python-logo{
-        width:110px;
-        margin-bottom:-30px;
-    }
-    #flask-logo{
-        width:110px;
-        margin-bottom:-30px;
-    }
-    #laravel-logo{
-        width:110px;
-        margin-bottom:-30px;
-    }
+    
     .habilidades-2{
         margin-top:60px;
     }
@@ -1967,6 +2190,53 @@ footer{
         border-left:0;
         left:-15px;
     }
+    /*----------------------------Seccion Habilidades ----------------------------*/
+
+    .div-flex-logo{
+        
+        padding:30px;
+        gap:50px;
+        
+    }
+    .div-flex-logo .td-figure{
+        width:100px;
+        
+    }
+    
+    /*----------------------------Seccion Experiencia ----------------------------*/
+    @keyframes slide {
+        from {
+            transform: translateX(0);
+        }
+    
+        to {
+            transform: translateX(-150%);
+        }
+    }
+    
+    .logos:before {
+        width: 50px; 
+    }
+    
+    .logos:after {
+        width: 50px; 
+    }
+    .logos-slide {
+        animation: 23s slide infinite linear;
+
+    }
+    .titulo-job .title{
+        font-size:1.3rem;
+    }
+    .box-job{
+        padding:20px 15px;
+    }
+    .enlaces-job{
+        padding:5px 0;
+    }
+    .tecnologias .tech-icon{
+        font-size:.9rem;
+    }
     /*----------------------------Seccion Proyectos ----------------------------*/
 
 
@@ -1996,6 +2266,11 @@ footer{
     } */
     .modal-footer{
         gap:15px;
+    }
+    
+    .logos-slide {
+        animation: 20s slide infinite linear;
+
     }
 }
 /*Celulares angostos*/

@@ -433,3 +433,17 @@ async function handleSubmit(event) {
     });
     }
 }
+
+//======================== Para el carrusel infinito de logos de clientes ========================
+
+// Selecciona todos los elementos .cliente-box
+let clienteBoxes = document.querySelectorAll(".logos-slide .cliente-box");
+
+// Convierte el NodeList en un array y duplica los elementos
+let duplicatedBoxes = [...clienteBoxes, ...clienteBoxes];
+
+// Recorre el array duplicado y clona los elementos
+duplicatedBoxes.forEach(box => {
+    let clone = box.cloneNode(true);
+    document.querySelector(".logos-slide").appendChild(clone);
+});
