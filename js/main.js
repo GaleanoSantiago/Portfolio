@@ -40,33 +40,20 @@ addEventListener("scroll",()=>{
         menu.classList.remove("fixed");
     }
 
-    //Prueba animacion subrayados al hacer scroll
+    // Seleccionamos todos los elementos con la clase "subrayado"
+    let subrayados = document.querySelectorAll(".subrayado");
+    let tamanoDePantalla = window.innerHeight;
 
-    let subrayado = document.getElementById("subrayado");
-    let subrayado2=document.getElementById("subrayado-2");
-    let subrayado3 = document.getElementById("subrayado-3");
-    let subrayado4 =document.getElementById("subrayado-4");
-    let subrayado5 =document.getElementById("subrayado-5");
+    subrayados.forEach((sub) => {
+        let posicion = sub.getBoundingClientRect().top;
 
-    let subsArray = [subrayado, subrayado2, subrayado3, subrayado4, subrayado5]
-
-    let posicionObjt1 = subrayado.getBoundingClientRect().top;
-    let posicionObjt2 = subrayado2.getBoundingClientRect().top;
-    let posicionObjt3 = subrayado3.getBoundingClientRect().top;
-    let posicionObjt4 = subrayado4.getBoundingClientRect().top;
-    let posicionObjt5 = subrayado5.getBoundingClientRect().top;
-    
-    let tamanoDePantalla=window.innerHeight;
-
-    let subPosiArray = [posicionObjt1, posicionObjt2, posicionObjt3, posicionObjt4, posicionObjt5]
-
-    for(let i=0; i<subPosiArray.length; i++){
-        if(subPosiArray[i] < (tamanoDePantalla-200)){
-            subsArray[i].style.animation = "fade-sub 2s ease";
-            subsArray[i].style.opacity=1;
+        if (posicion < tamanoDePantalla - 200) {
+            sub.style.animation = "fade-sub 2s ease";
+            sub.style.opacity = 1;
         }
-    }
-    
+    });
+
+
     activarItemsMenu(tamanoDePantalla);
     // Animacion del timeline
     activarAnimacion(tamanoDePantalla);
@@ -344,37 +331,26 @@ modal.forEach(mdl => {
 /*-------------- Para activar los iconos del menu --------------*/
 
 const activarItemsMenu = (tamanoDePantalla)=>{
-    const inicio = document.getElementById("inicio");
-    const sobreMi = document.getElementById("sobre-mi");
-    const educ = document.getElementById("educacion");
-    const habilidades = document.getElementById("habilidades");
-    const proyectos = document.getElementById("proyectos");
-    const contacto = document.getElementById("contacto");
-
-
-
-    let posicionInicio=inicio.getBoundingClientRect().top;
-    let posicionAbout=sobreMi.getBoundingClientRect().top;
-    let posicionEduc = educ.getBoundingClientRect().top;
-    let posicionSkills=habilidades.getBoundingClientRect().top;
-    let posicionProjects=proyectos.getBoundingClientRect().top;
-    let posicionContact=contacto.getBoundingClientRect().top;
-
-    let secciones = [posicionInicio, posicionAbout, posicionEduc, posicionSkills, posicionProjects, posicionContact]
-
     
-    for(let i=0; i<secciones.length; i++){
-        if(secciones[i]<(tamanoDePantalla-300) && secciones[i+1]>(tamanoDePantalla-300)){
-            itemsMenu[i].classList.add("active-item");
-        }else{
-            itemsMenu[i].classList.remove("active-item");
+    // Seleccionamos todas las secciones y los items del menú automáticamente
+    const secciones = document.querySelectorAll(".page-section"); 
+    const itemsMenu = document.querySelectorAll(".nav-link"); 
+
+    let indiceActivo = secciones.length - 1; // Por defecto, seleccionamos la última sección
+
+    secciones.forEach((seccion, index) => {
+        const posicion = seccion.getBoundingClientRect().top;
+
+        if (posicion < tamanoDePantalla - 300) {
+            indiceActivo = index;
         }
-        if(secciones[secciones.length - 1]<(tamanoDePantalla-300)){
-            itemsMenu[itemsMenu.length - 1].classList.add("active-item");
-        }else{
-            itemsMenu[itemsMenu.length - 1].classList.remove("active-item");
-        }
-    }
+    });
+
+    // Removemos la clase activa de todos y la añadimos solo al correspondiente
+    itemsMenu.forEach((item, index) => {
+        item.classList.toggle("active-item", index === indiceActivo);
+    });
+
 }
 
 const copyButton = document.getElementById("copyButton");
