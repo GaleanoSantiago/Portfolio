@@ -35,7 +35,7 @@
 
     <header>
         <div class="banner d-flex align-items-center text-center">
-            <div class="container" id="inicio">
+            <div class="container page-section" id="inicio">
                 <div class="banner-text text-light">
                     <h1>Hola, me llamo <span class="text-danger"> Galeano Santiago</span></h1>
                     <h2 class="text-light"><span class="typed"></span></h2>
@@ -47,17 +47,10 @@
                     <p>y soy un <i class="text-primary"> Desarrollador de Software Fullstack</i>.
                     </p>
                 </div>
-                <div class="text-light">
-                    <div class="btn-link text-decoration-none" data-aos="fade-zoom-in" data-aos-easing="ease-out-back"
-                        data-aos-delay="2400" data-aos-once="true">
-                        <a href="https://drive.google.com/file/d/12q1DnhaOD3Jz1lcoK4H8qs-Kpz4V1adB/view?usp=drive_link"
-                            target="_blank">
-                            <div class="btn-cv">
-                                Ver CV
-                            </div>
-                        </a>
-                    </div>
-
+                <div class="d-flex justify-content-center">
+                    <a href="#sobre-mi" class="arrow-down">
+                        <img src="./img/arrow-down.svg" alt="Flecha abajo">
+                    </a>
 
                 </div>
             </div>
@@ -126,7 +119,7 @@
 
     <!---------------------------------------------Sobre Mi--------------------------------------------->
 
-    <section class="section-about-me">
+    <section class="section-about-me page-section">
         <div class="container" id="sobre-mi">
             <div class="contenedor-about-me">
                 <h1 class="text-center titulo-h1" data-aos="fade-zoom-in" data-aos-once="true">SOBRE MÍ</h1>
@@ -208,6 +201,7 @@
                                 conmigo,
                                 <span class="fw-bolder"><a href="#contacto">¡No dude en ponerse en contacto!</a></span>
                                 <br> Estoy abierto a proyectos como Freelancer.
+                                
                                 <ul class="text-light">
                                     <li class=""><span class="text-danger fw-bolder">Nació y Reside en:</span> Formosa,
                                         AR</li>
@@ -218,6 +212,18 @@
                                         - Ingles (<span class="text-secondary">Intermedio</span>)</li>
                                 </ul>
                             </p>
+                            <div class="cont-btn-cv">
+                                <div class="btn-link text-decoration-none" data-aos="fade-zoom-in" data-aos-easing="ease-out-back" 
+                                data-aos-once="true">
+                                    <a href="https://drive.google.com/file/d/12q1DnhaOD3Jz1lcoK4H8qs-Kpz4V1adB/view?usp=drive_link"
+                                        target="_blank">
+                                        <div class="btn-cv">
+                                            Ver Curriculum Vitae
+                                        </div>
+                                    </a>
+                                    
+                                </div>
+                            </div>
                         </div>
                         <!-- <div class="sombra2"></div> -->
                     </div>
@@ -229,7 +235,7 @@
 
     <!---------------------------------------------Educacion--------------------------------------------->
 
-    <section class="educacion" id="educacion">
+    <section class="educacion page-section" id="educacion">
         <h1 class="text-center titulo-h1" data-aos="fade-zoom-in" data-aos-once="true">EDUCACIÓN</h1>
         <div class="subrayado container" id="subrayado-2"></div>
         <div class="timeline" id="timeline">
@@ -277,17 +283,16 @@
     </section>
 
     <!---------------------------------------------Experiencia--------------------------------------------->
-    <section class="experiencia" id="experiencia">
+    <section class="experiencia page-section" id="experiencia">
         <div class="container">
-            <h1 class="titulo-h1 text-center">EXPERIENCIA LABORAL</h1>
-            <div class="subrayado visible" id=""></div>
+            <h1 class="titulo-h1 text-center" data-aos="fade-zoom-in" data-aos-once="true">EXPERIENCIA LABORAL</h1>
+            <div class="subrayado " id=""></div>
             <div class="clientes-section">
-                <div class="div-subtitulo" data-aos="fade-zoom-in" data-aos-once="true">
+                <div class="div-subtitulo" data-aos="fade-up" data-aos-once="true">
                     <h3 class="subtitulo ">Clientes</h3>
-                    <!-- <div class="subrayado visible"></div> -->
 
                 </div>
-                <div class="logos">
+                <div class="logos" data-aos="fade-up" data-aos-once="true">
                     <div class="logos-slide">
                         <div class="cliente-box">
                             <div class="img-div">
@@ -328,7 +333,7 @@
             
             <div class="contenedor-trabajos">
                 <!-- Pediatra Soledad Alegre Blog -->
-                <div class="box-job">
+                <div class="box-job" data-aos="fade-up" data-aos-once="true">
                     <div class="titulo-job ">
                         <h4 class="title text-center">Blog de Pediatría Dra. Soledad Alegre</h4>
                     </div>
@@ -377,7 +382,7 @@
                 </div>
 
                 <!-- Ecoingenio Ecommerce -->
-                <div class="box-job">
+                <div class="box-job" data-aos="fade-up" data-aos-once="true">
                     <div class="titulo-job ">
                         <h4 class="title text-center">Ecommerce EcoIngenio</h4>
                     </div>
@@ -428,7 +433,7 @@
                 </div>
 
                 <!-- Herramienta de diseño -->
-                <div class="box-job">
+                <div class="box-job" data-aos="fade-up" data-aos-once="true">
                     <div class="titulo-job">
                         <h4 class="title text-center">Herramienta de Personalización de Vasos con Canvas</h4>
                     </div>
@@ -482,7 +487,7 @@
                 </div>
 
                 <!-- Famago Catalogo web -->
-                <div class="box-job">
+                <div class="box-job" data-aos="fade-up" data-aos-once="true">
                     <div class="titulo-job">
                         <h4 class="title text-center">Catalogo Web Famago</h4>
                     </div>
@@ -534,7 +539,7 @@
                 </div>
 
                 <!-- Construcom pagina web -->
-                <div class="box-job">
+                <div class="box-job" data-aos="fade-up" data-aos-once="true">
                     <div class="titulo-job">
                         <h4 class="title text-center">Página Web Constructora Comercial S.R.L</h4>
                     </div>
@@ -583,7 +588,7 @@
                 </div>
 
                 <!-- Cesar Jojot pasantia -->
-                <div class="box-job">
+                <div class="box-job" data-aos="fade-up" data-aos-once="true">
                     <div class="titulo-job">
                         <h4 class="title text-center">Pasantía Cesar Jojot Organización de Seguros</h4>
                     </div>
@@ -636,7 +641,7 @@
 
     <!---------------------------------------------Habilidades--------------------------------------------->
 
-    <section class="section-skills" id="habilidades">
+    <section class="section-skills page-section" id="habilidades">
         <div class="container">
             <div class="contenedor-skills">
                 <h1 CLASS="text-center titulo-h1" data-aos="fade-zoom-in" data-aos-once="true">HABILIDADES</h1>
@@ -646,7 +651,7 @@
                         <div class="col-12 col-lg-6 col-md-12 col-sm-12 div-flex-logo">
                             <div class="w-100" data-aos="fade-zoom-in" data-aos-once="true">
                                 <h3 class="subtitulo ">Frameworks y Plataformas</h3>
-                                <div class="subrayado visible"></div>
+                                <div class="subrayado "></div>
 
                             </div>
                             <div class="td-figure" data-aos="flip-left" data-aos-easing="ease-out-back" data-aos-once="true"
@@ -679,7 +684,7 @@
                         <div class="col-12 col-lg-6 col-md-12 col-sm-12 div-flex-logo">
                             <div class="w-100" data-aos="fade-zoom-in" data-aos-once="true">
                                 <h3 class="subtitulo">Lenguajes</h3>
-                                <div class="subrayado visible" ></div>
+                                <div class="subrayado " ></div>
 
                             </div>
                             <div class="td-figure "  data-aos="flip-left" data-aos-easing="ease-out-back" data-aos-once="true"
@@ -712,7 +717,7 @@
                         <div class="col-12 col-lg-12 col-md-12 col-sm-12 div-flex-logo">
                             <div class="w-100" data-aos="fade-zoom-in" data-aos-once="true">
                                 <h3 class="subtitulo">Herramientas y Bases de Datos</h3>
-                                <div class="subrayado visible"></div>
+                                <div class="subrayado "></div>
 
                             </div>
                             <div class="td-figure" data-aos="flip-left" data-aos-easing="ease-out-back" data-aos-once="true"
@@ -973,7 +978,7 @@
 
     <!---------------------------------------------Proyectos--------------------------------------------->
 
-    <section class="section-proys" id="proyectos">
+    <section class="section-proys page-section" id="proyectos">
         <div class="container">
             <h1 class="text-center titulo-h1" data-aos="fade-zoom-in" data-aos-once="true">PROYECTOS</h1>
             <div class="subrayado" id="subrayado-4"></div>
@@ -1407,7 +1412,7 @@
     <!---------------------------------------------Contacto--------------------------------------------->
 
 
-    <section class="section-contact" id="contacto">
+    <section class="section-contact page-section" id="contacto">
         <div class="container">
             <div class="contenedor-contact">
                 <h1 class="text-center titulo-h1" data-aos="fade-zoom-in" data-aos-once="true">CONTACTO</h1>
