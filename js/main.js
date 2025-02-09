@@ -328,6 +328,54 @@ modal.forEach(mdl => {
     });
 });
 
+// =================== Version 2025 ===================
+document.querySelectorAll(".btn-info").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        event.preventDefault(); // Evita que el enlace haga scroll arriba
+
+        // Encontrar la card más cercana al botón clickeado
+        let card = event.target.closest(".card");
+
+        if (card) {
+            // Obtener el título de la card
+            let cardTitle = card.querySelector(".card-title")?.textContent || "Sin título";
+            
+            // Obtener el texto de .card-text dentro de esa card
+            let cardText = card.querySelector(".card-text")?.textContent || "No hay descripción disponible.";
+
+            // Obtener el div.tecnologias dentro de la misma card
+            let tecnologias = card.querySelector(".tecnologias")?.outerHTML || "";
+
+            // Obtener los botones .btn-codigo y .btn-deploy dentro de la misma card
+            let btnCodigo = card.querySelector(".btn-codigo")?.outerHTML || "";
+            let btnDeploy = card.querySelector(".btn-deploy")?.outerHTML || "";
+
+            // Insertar el título en el header del modal
+            document.querySelector("#exampleModal .modal-header").innerHTML = `
+                <h5 class="modal-title">${cardTitle}</h5>
+                <button type="button" class="bg-light btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            `;
+
+            // Insertar el texto y las tecnologías en el cuerpo del modal
+            document.querySelector("#exampleModal .modal-body").innerHTML = `
+                <p>${cardText}</p>
+                ${tecnologias} 
+            `;
+
+            // Insertar los botones directamente en el modal-footer (sin crear otro div.btns-card)
+            document.querySelector("#exampleModal .modal-footer").innerHTML = btnCodigo + btnDeploy;
+
+            // Mostrar el modal
+            let modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+            modal.show();
+        }
+    });
+});
+
+
+
+
+
 /*-------------- Para activar los iconos del menu --------------*/
 
 const activarItemsMenu = (tamanoDePantalla)=>{
