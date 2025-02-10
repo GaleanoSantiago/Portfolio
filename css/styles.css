@@ -108,6 +108,7 @@ body{
     overflow-x: hidden !important;
     scroll-behavior: smooth;          
     color:var(--bs-gray-500);
+    background:var(--z4);
 }
 /* p,li{
     font-size:1rem;
