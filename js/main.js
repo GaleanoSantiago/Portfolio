@@ -279,8 +279,8 @@ modal.forEach(mdl => {
         Es 100% responsive y posee una serie de CRUDS del lado del administrador para que los empleados de la empresa puedan cargar los 
         colores, imagenes, tipografias y medidores disponibles. Por motivos de confidencialidad y seguridad, el codigo fuente no se encuentra disponible.`,
         lenguajes: `HTML - CSS - JS - FabricJS  - PHP - SQL - Laravel`,
-        proyecto:`https://prueba.ecoingenio.com.ar/disenio`,
-        codigo:`https://prueba.ecoingenio.com.ar/disenio`
+        proyecto:`https://ecoingenio.com.ar/disenio`,
+        codigo:`https://ecoingenio.com.ar/disenio`
     }
     ]
 
@@ -340,6 +340,9 @@ document.querySelectorAll(".btn-info").forEach((btn) => {
             // Obtener el título de la card
             let cardTitle = card.querySelector(".card-title")?.textContent || "Sin título";
             
+            // Obtener la img de la card
+            let cardImg = card.querySelector(".card-img-top")?.src || "";
+
             // Obtener el texto de .card-text dentro de esa card
             let cardText = card.querySelector(".card-text")?.textContent || "No hay descripción disponible.";
 
@@ -358,12 +361,15 @@ document.querySelectorAll(".btn-info").forEach((btn) => {
 
             // Insertar el texto y las tecnologías en el cuerpo del modal
             document.querySelector("#exampleModal .modal-body").innerHTML = `
+                <div class="modal-image">
+                    <img src="${cardImg}">
+                </div>
                 <p>${cardText}</p>
                 ${tecnologias} 
             `;
 
             // Insertar los botones directamente en el modal-footer (sin crear otro div.btns-card)
-            document.querySelector("#exampleModal .modal-footer").innerHTML = btnCodigo + btnDeploy;
+            document.querySelector("#exampleModal .modal-footer").innerHTML = btnDeploy + btnCodigo;
 
             // Mostrar el modal
             let modal = new bootstrap.Modal(document.getElementById("exampleModal"));
