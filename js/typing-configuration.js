@@ -1,8 +1,9 @@
 addEventListener("load",()=>{
 	var typed = new Typed('.typed', {
 		// strings: [
-		// 	'<i class="txt">texto de ejemplo</i>',
-		// 	'<i class="txt">texto de ejemplo 2</i>',
+		//  	'<i class="txt">Técnico en Programación</i>',
+		//  	'<i class="txt">Desarrollador de Software</i>',
+		//  	'<i class="txt">Desarrollador Web Full-Stack</i>',
 		// ],
 		stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 		typeSpeed: 50, // Velocidad en mlisegundos para poner una letra,
