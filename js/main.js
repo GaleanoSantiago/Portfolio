@@ -407,34 +407,37 @@ const activarItemsMenu = (tamanoDePantalla)=>{
 
 }
 
-const copyButton = document.getElementById("copyButton");
+const copyButton = document.querySelectorAll(".copyButton");
 const email = "galeanosantiago10@gmail.com";
 
-copyButton.addEventListener("click", () => {
-  // Crear un elemento de texto temporal
-  const tempInput = document.createElement("input");
-  tempInput.value = email;
-  document.body.appendChild(tempInput);
+copyButton.forEach(btn=>{
+    btn.addEventListener("click", () => {
+        // Crear un elemento de texto temporal
+        const tempInput = document.createElement("input");
+        tempInput.value = email;
+        document.body.appendChild(tempInput);
+      
+        // Seleccionar el texto dentro del elemento temporal
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // Para dispositivos móviles
+      
+        // Copiar el texto seleccionado al portapapeles
+        document.execCommand("copy");
+      
+        // Eliminar el elemento temporal
+        document.body.removeChild(tempInput);
+      
+        // Mostrar mensaje de éxito
+       
+        // Ejecutamos SweetAlert
+           Swal.fire({
+              icon: "success",
+              text: "¡Correo copiado al portapapeles!",
+              timer: 700, // <- Ocultar dentro de 0.7 segundos
+          });
+      });
+})
 
-  // Seleccionar el texto dentro del elemento temporal
-  tempInput.select();
-  tempInput.setSelectionRange(0, 99999); // Para dispositivos móviles
-
-  // Copiar el texto seleccionado al portapapeles
-  document.execCommand("copy");
-
-  // Eliminar el elemento temporal
-  document.body.removeChild(tempInput);
-
-  // Mostrar mensaje de éxito
- 
-  // Ejecutamos SweetAlert
-     Swal.fire({
-        icon: "success",
-        text: "¡Correo copiado al portapapeles!",
-        timer: 700, // <- Ocultar dentro de 0.7 segundos
-    });
-});
 
 
 //------------ Para Activar SweetAlert al enviar el correo ------------  
