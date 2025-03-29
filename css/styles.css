@@ -388,6 +388,13 @@ nav.fixed {
     /* animation: button-cv 2s ease;
     animation-delay:2.5s; */
 }
+.copyButton{
+    font-family: monospace;
+    border-radius: 5px;
+    background:var(--techBlue);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    color:var(--bs-light);
+}
 .btn-animation{
     animation: button-cv 2s ease;
     animation-delay:2.5s;
@@ -402,9 +409,11 @@ a>.btn-cv{
 }
 
 @media (hover: hover){
-	.btn-cv:hover{
+	.btn-cv:hover, .copyButton:hover{
     transition: background-color .4s;
     background:var(--techBlueHover);
+    border:none;
+
 }
 }
 .btn-cv:active{
@@ -1437,12 +1446,6 @@ svg {
 
 }
 
-#copyButton{
-    /* border-radius:5px; */
-    border:none;
-    padding:0;
-    background:transparent;
-}
 
 .form-contact{
     width:500px;
