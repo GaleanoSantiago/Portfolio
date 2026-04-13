@@ -498,12 +498,13 @@ a>.btn-cv{
 
 .pic-of-me{
     border:1px solid #fff;
-    width:300px;
-    height:300px;
+    width:350px;
+    height:350px;
     border-radius:500px;
-    background:url("../img/perfil-edit.webp");
-    background-size:cover;
-    background-position-y:20%;
+    background:url("../img/potrait.webp");
+    background-size:90%;
+    background-position-y:70%;
+    background-position-x:60%;
     overflow:hidden;
     margin:40px auto;
     animation: flotar 3s ease infinite;
@@ -1714,6 +1715,13 @@ footer{
     #node-logo, #express-logo{
         margin-top:0;
     }
+
+    /* ------------ Sobre mí ------------ */
+    .pic-of-me{
+        width: 300px;
+        height: 300px;
+    }
+
 
     /*----------------------------Proyectos----------------------------*/
     
